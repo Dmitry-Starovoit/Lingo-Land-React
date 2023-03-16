@@ -1,0 +1,50 @@
+.header {
+  margin: 0px;
+  height: 80px;
+  grid-area: 1/1/2/7;
+  background-image: url("../assets/bg-header.png");
+}
+.header .header__content {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.header .logo {
+  margin-top: 5px;
+  height: 45px;
+}
+.header .nav {
+  font-family: "Hanken Grotesk", sans-serif;
+  display: flex;
+  list-style: none;
+  font-size: 18px;
+  padding-inline-start: 0px;
+}
+.header .nav li + li {
+  padding-left: 15px;
+}
+.header .nav a {
+  font-size: 400;
+  color: rgb(237, 237, 237);
+  text-decoration: none;
+}
+.header .nav a:after {
+  content: "";
+  display: block;
+  border-bottom: 3px solid #e1bf37;
+  width: 0;
+  left: 0;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  transition-delay: 0s;
+}
+.header .nav a:hover:after {
+  width: 100%;
+  border-bottom: 3px solid #e1bf37;
+  color: rgb(204, 204, 204);
+}
+.header .nav a:hover {
+  color: rgb(204, 204, 204);
+}

@@ -1,0 +1,129 @@
+.footer {
+  font-family: "Hanken Grotesk", sans-serif;
+  background-image: url("../assets/bg-header.png");
+  height: 230px;
+  margin-bottom: 0px;
+}
+.footer .logo__footer {
+  width: 150px;
+}
+.footer .footer__content {
+  max-width: 1200px;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  color: rgb(156, 156, 156);
+}
+.footer .footer__content .block__one {
+  width: 350px;
+  border-right: 1px solid rgb(116, 116, 116);
+}
+.footer .footer__content .block__one .text__footer {
+  color: rgb(156, 156, 156);
+  width: 200px;
+}
+.footer .footer__content .block__two {
+  width: 250px;
+  border-right: 1px solid rgb(116, 116, 116);
+}
+.footer .footer__content .block__two .footer__title {
+  margin-left: 40px;
+  letter-spacing: 1.5px;
+}
+.footer .footer__content .block__two .nav__footer {
+  list-style: none;
+  font-size: 15px;
+  color: rgb(156, 156, 156);
+}
+.footer .footer__content .block__two .nav__footer li a {
+  font-size: 400;
+  color: rgb(156, 156, 156);
+  text-decoration: none;
+}
+.footer .footer__content .block__two .nav__footer li a:after {
+  display: block;
+  width: 0;
+  left: 0;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  transition-delay: 0s;
+}
+.footer .footer__content .block__two .nav__footer li a:hover {
+  color: rgb(204, 204, 204);
+}
+.footer .footer__content .block__two .nav__footer li + li {
+  padding-top: 5px;
+}
+.footer .footer__content .block__three {
+  width: 250px;
+  border-right: 1px solid rgb(116, 116, 116);
+}
+.footer .footer__content .block__three .footer__title {
+  margin-left: 40px;
+  letter-spacing: 1.5px;
+}
+.footer .footer__content .block__three .follow__list {
+  list-style: none;
+  font-size: 15px;
+  color: rgb(156, 156, 156);
+}
+.footer .footer__content .block__three .follow__list li a {
+  font-size: 400;
+  color: rgb(156, 156, 156);
+  text-decoration: none;
+}
+.footer .footer__content .block__three .follow__list li a:after {
+  display: block;
+  width: 0;
+  left: 0;
+  -webkit-transition: width 1s ease-in-out;
+  transition: width 1s ease-in-out;
+  transition-delay: 0s;
+}
+.footer .footer__content .block__three .follow__list li a:hover {
+  color: rgb(204, 204, 204);
+}
+.footer .footer__content .block__three .follow__list li + li {
+  padding-top: 5px;
+}
+.footer .footer__content .block__three .follow__list img {
+  height: 12px;
+  margin-right: 8px;
+}
+.footer .footer__content .block__four {
+  position: relative;
+  width: 350px;
+}
+.footer .footer__content .block__four .email__title {
+  margin-left: 100px;
+  letter-spacing: 1.5px;
+}
+.footer .footer__content .block__four .text__footer--newsletter {
+  width: 250px;
+  margin-left: auto;
+}
+.footer .footer__content .block__four .email__send {
+  display: flex;
+}
+.footer .footer__content .block__four .email__send .input__footer {
+  color: rgb(156, 156, 156);
+  position: relative;
+  opacity: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid rgb(156, 156, 156);
+  width: 215px;
+  height: 30px;
+  margin-left: 100px;
+  font-size: 15px;
+  outline: none;
+  caret-color: rgb(156, 156, 156);
+}
+
+.button__send {
+  margin-top: 14px;
+  margin-left: 4px;
+  width: 25px;
+  height: 20px;
+  cursor: pointer;
+}

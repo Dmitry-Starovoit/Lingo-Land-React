@@ -1,0 +1,44 @@
+.content {
+  height: 623px;
+  background-image: url("../../assets/photo1.jpg");
+  background-position: top;
+  background-size: cover;
+  padding-top: 50px;
+  background-color: rgb(237, 237, 237);
+}
+.content .content__header {
+  text-align: center;
+  color: rgb(72, 72, 72);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.content .content__header .content__title {
+  font-size: 55px;
+  padding-top: 20px;
+}
+.content .content__header .content__title--text {
+  font-size: 25px;
+  margin: 0 auto;
+  width: 450px;
+  line-height: 40px;
+}
+.content .content__header .content__title--button {
+  margin-top: 40px;
+  width: 300px;
+  height: 100px;
+  background-color: #e1bf37;
+  border: 0px;
+  border-radius: 10px;
+  font-size: 20px;
+  color: rgb(72, 72, 72);
+  font-family: "Hanken Grotesk", sans-serif;
+  font-weight: 600;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+.content .content__header .content__title--button:hover {
+  transform: scale(1.06);
+  -webkit-box-shadow: 10px 10px 50px 1px rgba(0, 0, 0, 0.37);
+  -moz-box-shadow: 10px 10px 50px 1px rgba(0, 0, 0, 0.37);
+  box-shadow: 10px 10px 50px 1px rgba(0, 0, 0, 0.37);
+}
