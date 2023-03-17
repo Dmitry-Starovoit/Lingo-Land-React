@@ -68,6 +68,10 @@ form input + input {
   margin-left: 20px;
 }
 
+.page {
+  margin-top: 1px;
+}
+
 form input {
   color: rgb(106, 106, 106);
   font-weight: 600;
