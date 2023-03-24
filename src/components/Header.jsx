@@ -17,7 +17,7 @@ const Header = function () {
             <Link to="/vocabulary">Vocabulary</Link>
           </li>
           <li className="nav__item">
-            <Link to="/news">News</Link>
+            <Link to="/workbook">Workbook</Link>
           </li>
           <li className="nav__item">
             <Link to="/contacts">Contacts</Link>

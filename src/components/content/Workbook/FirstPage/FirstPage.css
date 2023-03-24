@@ -1,0 +1,73 @@
+.page {
+  margin-bottom: 40px;
+}
+
+.page h1 {
+  text-align: center;
+}
+
+.task__title {
+  width: 350px;
+  height: 50px;
+  background-color: #ffb784;
+  text-align: center;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.task__title--text {
+  padding-top: 10px;
+}
+
+.task__one input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.task__two {
+  display: flex;
+  justify-content: center;
+}
+
+.task__two--flex {
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
+
+.task__two .task__two--item + .task__two--item {
+  margin-left: 70px;
+}
+
+.task__two--item input {
+  margin-top: 18px;
+  height: 18px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.task__three--item {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.task__three--item p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.task__three--item input {
+  margin-top: 0px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  height: 18px;
+}

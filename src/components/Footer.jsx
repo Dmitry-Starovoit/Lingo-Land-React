@@ -45,7 +45,7 @@ const Footer = function () {
               <Link to="/vocabulary">Vocabulary</Link>
             </li>
             <li className="nav__footer--item">
-              <Link to="/news">News</Link>
+              <Link to="/workbook">Workbook</Link>
             </li>
             <li className="nav__footer--item">
               <Link to="/contacts">Contacts</Link>
