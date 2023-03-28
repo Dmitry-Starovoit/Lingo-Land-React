@@ -30,10 +30,15 @@
 .task__two {
   display: flex;
   justify-content: center;
+  height: 300px;
+}
+
+.task__two--item {
+  justify-content: space-between;
 }
 
 .task__two--flex {
-  width: 260px;
+  width: 300px;
   display: flex;
   justify-content: space-between;
   height: 35px;
@@ -44,18 +49,48 @@
 }
 
 .task__two--item input {
-  margin-top: 18px;
-  height: 18px;
+  width: 150px;
+  font-size: 13px;
+  margin-top: 17px;
+  height: 17px;
   background: none;
   border: none;
   border-bottom: 2px solid black;
   outline: none;
 }
 
+.task__two--input {
+  width: 200px;
+}
+
 .task__three--item {
   display: flex;
   justify-content: space-between;
   text-align: center;
+}
+
+.items {
+  width: 168px;
+}
+
+.items__value {
+  display: block;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.items__value input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  width: 164px;
+  outline: none;
+  text-align: center;
+}
+
+.items__value input + input {
+  margin-left: 62px;
 }
 
 .task__three--item p {
