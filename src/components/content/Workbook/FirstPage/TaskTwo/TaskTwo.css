@@ -1,0 +1,40 @@
+.task__two {
+  display: flex;
+  justify-content: center;
+  height: 300px;
+}
+
+.task__two--item {
+  justify-content: space-between;
+}
+
+.task__two--flex {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  height: 35px;
+}
+
+.task__two .task__two--item + .task__two--item {
+  margin-left: 70px;
+}
+
+.task__two--item input {
+  font-size: 15px;
+  width: 150px;
+  font-size: 13px;
+  margin-top: 17px;
+  height: 17px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.task__two--input {
+  width: 200px;
+}
+
+.task__two--input input {
+  font-size: 15px;
+}

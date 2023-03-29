@@ -1,0 +1,44 @@
+.task__three--item {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.items {
+  width: 168px;
+}
+
+.items__value {
+  display: block;
+  justify-content: space-between;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.items__value input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  font-size: 15px;
+  width: 158px;
+  outline: none;
+  text-align: center;
+}
+
+.items__value input + input {
+  margin-left: 62px;
+}
+
+.task__three--item p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.task__three--item input {
+  margin-top: 0px;
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+  height: 18px;
+}

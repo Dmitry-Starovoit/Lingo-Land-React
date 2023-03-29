@@ -5,28 +5,236 @@ import "./Vocabullary.css";
 const Vocabulary = function () {
   const wordsObj = [
     {
-      ukrWord: "дерево",
-      engWord: "tree",
+      ukrWord: "бенкет, святкування",
+      engWord: "feast",
     },
     {
-      ukrWord: "миша",
-      engWord: "mouse",
+      ukrWord: "шматок, частина, недоїдки",
+      engWord: "scrap",
     },
     {
-      ukrWord: "яйце",
-      engWord: "egg",
+      ukrWord: "величність",
+      engWord: "majesty",
     },
     {
-      ukrWord: "яблуко",
-      engWord: "apple",
+      ukrWord: "запит, прохання",
+      engWord: "reqest",
+    },
+    {
+      ukrWord: "вхід, вступ",
+      engWord: "entrance",
+    },
+    {
+      ukrWord: "ставати на коліна",
+      engWord: "genuflect",
+    },
+    {
+      ukrWord: "шрам",
+      engWord: "scar",
+    },
+    {
+      ukrWord: "мабуть, можливо",
+      engWord: "perhaps",
+    },
+    {
+      ukrWord: "неповага",
+      engWord: "disrespect",
+    },
+    {
+      ukrWord: "повага",
+      engWord: "respect",
+    },
+    {
+      ukrWord: "в напрямку, до, назустріч",
+      engWord: "towards",
+    },
+    {
+      ukrWord: "величезний",
+      engWord: "tremendous",
+    },
+    {
+      ukrWord: "дорогоцінний",
+      engWord: "precious",
     },
     {
       ukrWord: "мудрий",
       engWord: "wise",
     },
     {
-      ukrWord: "обгортка",
-      engWord: "wrapper",
+      ukrWord: "ударити",
+      engWord: "slam",
+    },
+    {
+      ukrWord: "дзьоб",
+      engWord: "beak",
+    },
+    {
+      ukrWord: "охороняти",
+      engWord: "patrol",
+    },
+    {
+      ukrWord: "обіцяти",
+      engWord: "promise",
+    },
+    {
+      ukrWord: "виключити, вигнати",
+      engWord: "expel",
+    },
+    {
+      ukrWord: "полювання",
+      engWord: "hunt",
+    },
+    {
+      ukrWord: "зло",
+      engWord: "evil",
+    },
+    {
+      ukrWord: "незваний гість",
+      engWord: "intruder",
+    },
+    {
+      ukrWord: "належати",
+      engWord: "belong",
+    },
+    {
+      ukrWord: "захищати",
+      engWord: "protect",
+    },
+    {
+      ukrWord: "торкатись",
+      engWord: "touch",
+    },
+    {
+      ukrWord: "поза, за межами",
+      engWord: "beyond",
+    },
+    {
+      ukrWord: "тінь",
+      engWord: "shadow",
+    },
+    {
+      ukrWord: "повзати",
+      engWord: "crawl",
+    },
+    {
+      ukrWord: "просочуватись",
+      engWord: "ooze",
+    },
+    {
+      ukrWord: "мул, багно",
+      engWord: "mud",
+    },
+    {
+      ukrWord: "мураха",
+      engWord: "ant",
+    },
+    {
+      ukrWord: "стрибати",
+      engWord: "leap",
+    },
+    {
+      ukrWord: "доповідь",
+      engWord: "report",
+    },
+    {
+      ukrWord: "жужати",
+      engWord: "buzz",
+    },
+    {
+      ukrWord: "бджола",
+      engWord: "bee",
+    },
+    {
+      ukrWord: "дитина (про тварин)",
+      engWord: "cub",
+    },
+    {
+      ukrWord: "гієна",
+      engWord: "hyena",
+    },
+    {
+      ukrWord: "вести, очолювати",
+      engWord: "lead",
+    },
+    {
+      ukrWord: "нападати",
+      engWord: "pounce",
+    },
+    {
+      ukrWord: "далеко",
+      engWord: "away",
+    },
+    {
+      ukrWord: "справедливо",
+      engWord: "fair",
+    },
+    {
+      ukrWord: "точно",
+      engWord: "exactly",
+    },
+    {
+      ukrWord: "наближатися",
+      engWord: "approach",
+    },
+    {
+      ukrWord: "погоня, гнатися",
+      engWord: "chase",
+    },
+    {
+      ukrWord: "благати, просити",
+      engWord: "beg",
+    },
+    {
+      ukrWord: "на, після",
+      engWord: "upon",
+    },
+    {
+      ukrWord: "людина з народу (просто людина)",
+      engWord: "commoner",
+    },
+    {
+      ukrWord: "змішуватися",
+      engWord: "mingle",
+    },
+    {
+      ukrWord: "спуститися, знизитись",
+      engWord: "come down",
+    },
+    {
+      ukrWord: "вилетіло з голови",
+      engWord: "slipped my mind",
+    },
+    {
+      ukrWord: "сила",
+      engWord: "strength",
+    },
+    {
+      ukrWord: "тварина, жорсткий",
+      engWord: "brute",
+    },
+    {
+      ukrWord: "існувати",
+      engWord: "exist",
+    },
+    {
+      ukrWord: "барлога",
+      engWord: "den",
+    },
+    {
+      ukrWord: "кладовище",
+      engWord: "graveyard",
+    },
+    {
+      ukrWord: "гнити, псуватись",
+      engWord: "rot",
+    },
+    {
+      ukrWord: "палити, горіти",
+      engWord: "burn",
+    },
+    {
+      ukrWord: "неймовірний",
+      engWord: "incredible",
     },
   ];
 

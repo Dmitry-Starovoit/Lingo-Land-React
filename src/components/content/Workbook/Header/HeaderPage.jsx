@@ -4,7 +4,7 @@ import "./HeaderPage.css";
 const HeaderPage = () => {
   return (
     <div className="header__workbook">
-      <h1>Воркбук до фільму Король Лев</h1>
+      <h1>Workbook "The Lion King"</h1>
       <h4>dhdgfhgdfhgdfhghdghdf</h4>
       <video controls src={video} poster={poster}></video>
     </div>

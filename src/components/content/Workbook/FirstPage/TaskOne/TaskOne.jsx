@@ -1,11 +1,8 @@
 import { useState } from "react";
+import "./TaskOne.css";
 
 const TaskOneFirstPage = (props) => {
-  const task1Ans = ["respect", "promise", "patrol", "slamming", "wise", "evil"];
-
-  let taskResult = new Set();
   const [getValue, setGetValue] = useState([]);
-  const [changeText, setChangeText] = useState("");
 
   const valueEventListener = (event) => {
     setGetValue({
@@ -14,27 +11,7 @@ const TaskOneFirstPage = (props) => {
     });
   };
 
-  const changeTextFunc = () => {
-    setChangeText(
-      taskResult.size < 6
-        ? `${taskResult.size} питань з ${task1Ans.length} правильно`
-        : `Все вірно`
-    );
-  };
-
-  const valueEventHandler = () => {
-    for (let i = 0; i <= task1Ans.length; i++) {
-      if (
-        task1Ans[i] === getValue[`value${i}`] &&
-        getValue[`value${i}`] !== undefined
-      ) {
-        taskResult.add(task1Ans[i]);
-        console.log(taskResult);
-      }
-    }
-    changeTextFunc();
-    return <h4></h4>;
-  };
+  props.valueEventHandler(getValue);
 
   return (
     <>
@@ -99,9 +76,6 @@ const TaskOneFirstPage = (props) => {
           />{" "}
           thoughts and actions.
         </p>
-
-        <button onClick={valueEventHandler}>send</button>
-        <h4> {changeText}</h4>
       </div>
     </>
   );

@@ -1,18 +1,8 @@
 import { useState } from "react";
+import "./TaskThree.css";
 
 const TaskThreeFirstPage = (props) => {
-  const task3Data = [
-    { que: "Багно", hint: "d m u", ans: "mud" },
-    { que: "Кладовище", hint: "a r g v e r y a d", ans: "graveyard" },
-    { que: "Існувати", hint: "i s x t e", ans: "exist" },
-    { que: "Благати", hint: "e g b", ans: "beg" },
-  ];
-
-  const task3Ans = task3Data.map((obj) => obj.ans);
-
   const [getValue, setGetValue] = useState([]);
-  const [changeText, setChangeText] = useState("");
-  let task2Result = new Set();
 
   const valueEventListener = (event) => {
     setGetValue({
@@ -21,25 +11,8 @@ const TaskThreeFirstPage = (props) => {
     });
   };
 
-  const changeTextFunc = () => {
-    setChangeText(
-      task2Result.size < 4
-        ? `${task2Result.size} питань з ${task3Ans.length} правильно`
-        : `Все вірно`
-    );
-  };
+  props.valueEventHandler(getValue);
 
-  const valueEventHandler = () => {
-    for (let i = 0; i <= task3Ans.length; i++) {
-      if (
-        task3Ans[i] === getValue[`value${i}`] &&
-        getValue[`value${i}`] !== undefined
-      ) {
-        task2Result.add(task3Ans[i]);
-      }
-    }
-    changeTextFunc();
-  };
   return (
     <>
       <div className="task__title">
@@ -49,7 +22,7 @@ const TaskThreeFirstPage = (props) => {
       </div>
       <div className="task__three">
         <div className="task__three--item">
-          {task3Data.map((item) => {
+          {props.task3Data.map((item) => {
             return (
               <div className="items">
                 <p className="task__three--text">{item.que}</p>
@@ -85,8 +58,6 @@ const TaskThreeFirstPage = (props) => {
           />
         </div>
       </div>
-      <button onClick={valueEventHandler}>send</button>
-      <h4> {changeText}</h4>
     </>
   );
 };

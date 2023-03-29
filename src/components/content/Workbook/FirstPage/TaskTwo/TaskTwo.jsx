@@ -1,34 +1,8 @@
 import { useState } from "react";
+import "./TaskTwo.css";
 
 const TaskTwoFirstPage = (props) => {
-  const task2DataColumnFirst = [
-    { que: "Genuflect ", ans: "ставати на коліна" },
-    { que: "Scar      ", ans: "шрам" },
-    { que: "Perhaps   ", ans: "можливо" || "мабуть" },
-    { que: "Expel     ", ans: "вигнати" || "виключити" },
-    { que: "Intruder  ", ans: "незваний гість" },
-    { que: "Belong    ", ans: "належати" },
-    { que: "Beyond    ", ans: "за межами" || "поза" },
-    { que: "Report    ", ans: "доповідь" },
-  ];
-
-  const task2DataColumnSecond = [
-    { que: "Lead      ", ans: "вести" || "очолювати" },
-    { que: "Away      ", ans: "далеко" },
-    { que: "Towards   ", ans: "в напрямку" || "до" || "на зустріч" },
-    { que: "Majesty   ", ans: "величність" },
-    { que: "Buzz      ", ans: "жужати" },
-    { que: "Reqest    ", ans: "запит" || "прохання" },
-    { que: "Hungry    ", ans: "голодний" },
-    { que: "Tremendous", ans: "величезний" },
-  ];
-
-  const task2Data = [...task2DataColumnFirst, ...task2DataColumnSecond];
-  const task2Ans = task2Data.map((obj) => obj.ans);
-
   const [getValue, setGetValue] = useState([]);
-  const [changeText, setChangeText] = useState("");
-  let task2Result = new Set();
 
   const valueEventListener = (event) => {
     setGetValue({
@@ -37,25 +11,7 @@ const TaskTwoFirstPage = (props) => {
     });
   };
 
-  const changeTextFunc = () => {
-    setChangeText(
-      task2Result.size < 16
-        ? `${task2Result.size} питань з ${task2Ans.length} правильно`
-        : `Все вірно`
-    );
-  };
-
-  const valueEventHandler = () => {
-    for (let i = 0; i <= task2Ans.length; i++) {
-      if (
-        task2Ans[i] === getValue[`value${i}`] &&
-        getValue[`value${i}`] !== undefined
-      ) {
-        task2Result.add(task2Ans[i]);
-      }
-    }
-    changeTextFunc();
-  };
+  props.valueEventHandler(getValue);
 
   return (
     <>
@@ -66,7 +22,7 @@ const TaskTwoFirstPage = (props) => {
         <div className="task__two--item">
           <div className="task__two--flex">
             <div className="task__two--text">
-              {task2DataColumnFirst.map((item) => {
+              {props.task2DataColumnFirst.map((item) => {
                 return <p>{item.que}</p>;
               })}
             </div>
@@ -125,7 +81,7 @@ const TaskTwoFirstPage = (props) => {
         <div className="task__two--item">
           <div className="task__two--flex">
             <div className="task__two--text">
-              {task2DataColumnSecond.map((item) => {
+              {props.task2DataColumnSecond.map((item) => {
                 return <p>{item.que}</p>;
               })}
             </div>
@@ -182,8 +138,6 @@ const TaskTwoFirstPage = (props) => {
           </div>
         </div>
       </div>
-      <button onClick={valueEventHandler}>send</button>
-      <h4> {changeText}</h4>
     </>
   );
 };
