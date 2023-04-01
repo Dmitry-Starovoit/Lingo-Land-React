@@ -1,4 +1,4 @@
-.page__second {
+.page__third {
   margin-bottom: 40px;
   margin-top: 40px;
   border: 3px solid rgb(112, 112, 112);
@@ -10,21 +10,21 @@
   box-shadow: 0px 0px 22px 0px rgba(168, 168, 168, 1);
 }
 
-.page__second h4 {
+.page__third h4 {
   margin-left: 700px;
   position: absolute;
 }
 
-.page__second .button__div {
+.page__third .button__div {
   text-align: center;
 }
 
-.page__second button {
-  margin-top: 30px;
+.page__third button {
+  margin-top: 20px;
   width: 150px;
 }
 
-.page__second h1 {
+.page__third h1 {
   text-align: center;
   color: #fff7b7;
   font-style: italic;
@@ -44,8 +44,8 @@
     -4px 4px 0 #ff4949, 4px 4px 0 #ff4949;
 }
 
-.task__title {
-  width: 350px;
+.page__third .task__title {
+  width: 500px;
   height: 50px;
   background-color: #ffb784;
   text-align: center;

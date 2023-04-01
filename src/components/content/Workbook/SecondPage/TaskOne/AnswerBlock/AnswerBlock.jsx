@@ -3,19 +3,19 @@ const AnswerBlock = (props) => {
   const [xBlockOne, setXBlockOne] = useState(350);
   const [yBlockOne, setYBlockOne] = useState(1950);
   const [xBlockTwo, setXBlockTwo] = useState(350);
-  const [yBlockTwo, setYBlockTwo] = useState(2010);
+  const [yBlockTwo, setYBlockTwo] = useState(2050);
   const [xBlockThree, setXBlockThree] = useState(350);
-  const [yBlockThree, setYBlockThree] = useState(2070);
+  const [yBlockThree, setYBlockThree] = useState(2150);
   const [xBlockFour, setXBlockFour] = useState(350);
-  const [yBlockFour, setYBlockFour] = useState(2130);
+  const [yBlockFour, setYBlockFour] = useState(2250);
   const [xBlockFive, setXBlockFive] = useState(350);
-  const [yBlockFive, setYBlockFive] = useState(2190);
+  const [yBlockFive, setYBlockFive] = useState(2350);
   const [xBlockSix, setXBlockSix] = useState(350);
-  const [yBlockSix, setYBlockSix] = useState(2250);
+  const [yBlockSix, setYBlockSix] = useState(2450);
   const [xBlockSeven, setXBlockSeven] = useState(350);
-  const [yBlockSeven, setYBlockSeven] = useState(2310);
+  const [yBlockSeven, setYBlockSeven] = useState(2550);
   const [xBlockNine, setXBlockNine] = useState(350);
-  const [yBlockNine, setYBlockNine] = useState(2370);
+  const [yBlockNine, setYBlockNine] = useState(2650);
 
   const handleDragEndOne = (event) => {
     setXBlockOne(event.pageX);

@@ -1,5 +1,5 @@
 import "./ContentHeader.css";
-
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 const ContentHeader = function (props) {
   return (
     <div className="content">
@@ -8,9 +8,11 @@ const ContentHeader = function (props) {
         <h4 className="content__title--text">
           Learn English easily and <span>confidently with Lingo Land</span>
         </h4>
-        <button className="content__title--button">
-          GO TO OUR <span>WORKBOOKS</span>
-        </button>
+        <Link to="/workbook">
+          <button className="content__title--button">
+            GO TO OUR <span>WORKBOOKS</span>
+          </button>
+        </Link>
       </div>
     </div>
   );

@@ -1,3 +1,4 @@
+import "./SecondPage.css";
 import TaskOneSecondPage from "./TaskOne/TaskOne";
 import img1 from "../../../../assets/task4/1.jpg";
 import img2 from "../../../../assets/task4/2.jpg";
@@ -129,7 +130,7 @@ const SecondPage = () => {
   };
 
   return (
-    <div className="page">
+    <div className="page__second">
       <h1>Before Watching</h1>
       <TaskOneSecondPage images={images} checkAns={checkAns} />
       <h4>{changeTextTask1}</h4>

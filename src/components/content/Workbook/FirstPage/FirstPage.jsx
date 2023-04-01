@@ -102,7 +102,7 @@ const FirstPage = () => {
         task3Data={task3Data}
         valueEventHandler={valueEventHandlerTask3}
       />
-      <h4>{changeTextTask3}</h4>
+      <h4> {changeTextTask3}</h4>
       <div className="button__div">
         <button onClick={changeTextFunc}>Check answers</button>
       </div>

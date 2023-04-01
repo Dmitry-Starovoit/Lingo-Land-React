@@ -1,0 +1,10 @@
+.task__five--input {
+  background: none;
+  border: none;
+  border-bottom: 2px solid black;
+  outline: none;
+}
+
+.task__five {
+  margin-left: 40px;
+}
