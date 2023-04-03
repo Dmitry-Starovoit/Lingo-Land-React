@@ -1,0 +1,53 @@
+.flex__text__block {
+  display: flex;
+}
+.text__block--eight {
+  background: rgb(207, 207, 207, 0.5);
+  margin-top: 30px;
+  margin-left: 20px;
+  height: 60px;
+  font-size: 18px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.text__task--eight {
+  opacity: 100%;
+}
+
+.input__block--eight {
+  margin-top: 30px;
+}
+
+.input__block--eight input {
+  background: rgb(207, 207, 207, 0.5);
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  font-size: 20px;
+  border-radius: 100px;
+  margin-left: 50px;
+  border: none;
+  outline: none;
+}
+
+.input__block--eight input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+.input__block--eight div + div {
+  margin-top: 28px;
+}
+
+.task__title {
+  border-radius: 10px;
+}
+
+.task__title {
+  border-radius: none;
+}

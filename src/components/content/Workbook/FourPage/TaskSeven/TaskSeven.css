@@ -6,6 +6,10 @@
   justify-content: space-between;
 }
 
+.task__title {
+  border-radius: 10px;
+}
+
 .block__task--seven {
   display: flex;
   align-items: center;

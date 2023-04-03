@@ -24,7 +24,7 @@ const TaskThreeFirstPage = (props) => {
         <div className="task__three--item">
           {props.task3Data.map((item) => {
             return (
-              <div className="items">
+              <div key={item.id} className="items">
                 <p className="task__three--text">{item.que}</p>
                 <p>{item.hint}</p>
               </div>

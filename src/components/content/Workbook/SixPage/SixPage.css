@@ -1,4 +1,4 @@
-.page__four {
+.page__six {
   margin-bottom: 40px;
   margin-top: 40px;
   border: 3px solid rgb(112, 112, 112);
@@ -16,21 +16,21 @@
   );
 }
 
-.page__four h4 {
+.page__six h4 {
   margin-left: 700px;
   position: absolute;
 }
 
-.page__four .button__div {
+.page__six .button__div {
   text-align: center;
 }
 
-.page__four button {
+.page__six button {
   margin-top: 20px;
   width: 150px;
 }
 
-.page__four h1 {
+.page__six h1 {
   text-align: center;
   color: #fff7b7;
   font-style: italic;
@@ -50,9 +50,9 @@
     -4px 4px 0 #8c5a2d, 4px 4px 0 #8c5a2d;
 }
 
-.page__four .task__title {
+.page__six .task__title {
   width: 500px;
-  height: 50px;
+  height: 70px;
   color: rgb(200, 200, 200);
   background-color: #8c5a2d;
   text-align: center;

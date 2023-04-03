@@ -23,7 +23,7 @@ const TaskTwoFirstPage = (props) => {
           <div className="task__two--flex">
             <div className="task__two--text">
               {props.task2DataColumnFirst.map((item) => {
-                return <p>{item.que}</p>;
+                return <p key={item.id}>{item.que}</p>;
               })}
             </div>
             <div className="task__two--input">
@@ -82,7 +82,7 @@ const TaskTwoFirstPage = (props) => {
           <div className="task__two--flex">
             <div className="task__two--text">
               {props.task2DataColumnSecond.map((item) => {
-                return <p>{item.que}</p>;
+                return <p key={item.id}>{item.que}</p>;
               })}
             </div>
             <div className="task__two--input">
