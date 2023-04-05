@@ -3,7 +3,14 @@ import "./FourPage.css";
 import { useState } from "react";
 
 const FourPage = () => {
-  const task7Ans = ["1", "2", "3", "4", "5", "6"];
+  const task7Ans = [
+    "aproaches",
+    "requested",
+    "will rise",
+    "made",
+    "will answer",
+    "don't look",
+  ];
   let task7Result = new Set();
 
   const [changeTextTask7, setChangeTextTask7] = useState("");

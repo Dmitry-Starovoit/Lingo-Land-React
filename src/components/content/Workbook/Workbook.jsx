@@ -6,6 +6,7 @@ import ThirdPage from "./ThirdPage/ThirdPage";
 import FourPage from "./FourPage/FourPage";
 import FivePage from "./FivePage/FivePage";
 import SixPage from "./SixPage/SixPage";
+import SevenPage from "./SevenPage/SevenPage";
 const Workbook = function () {
   const task1Ans = ["respect", "promise", "patrol", "slamming", "wise", "evil"];
   const task2DataColumnFirst = [
@@ -62,6 +63,7 @@ const Workbook = function () {
       <FourPage />
       <FivePage />
       <SixPage />
+      <SevenPage />
     </div>
   );
 };

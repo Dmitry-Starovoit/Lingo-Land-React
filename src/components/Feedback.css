@@ -1,6 +1,15 @@
+div {
+  color: black;
+}
+
 .dnd-block {
   color: white;
   background-color: black;
   height: 100px;
   width: 100px;
+}
+
+.formContainer {
+  text-align: center;
+  color: black;
 }

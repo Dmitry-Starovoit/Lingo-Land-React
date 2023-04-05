@@ -33,7 +33,7 @@ const TaskEightFivePage = (props) => {
         <div>
           {dataEightTask.map((item) => {
             return (
-              <div className="text__block--eight">
+              <div key={Math.random()} className="text__block--eight">
                 <p className="text__task--eight">{item}</p>
               </div>
             );

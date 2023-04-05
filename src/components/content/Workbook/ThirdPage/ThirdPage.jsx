@@ -5,7 +5,14 @@ import { useState } from "react";
 
 const ThirdPage = () => {
   const task5Ans = ["mud", "den", "evil", "scraps", "disrespect", "precious"];
-  const task6Ans = ["1", "2", "3", "4", "5", "6"];
+  const task6Ans = [
+    "incredible",
+    "touch",
+    "burn",
+    "touch",
+    "ooze",
+    "incredible",
+  ];
   let task5Result = new Set();
   let task6Result = new Set();
   const [changeTextTask5, setChangeTextTask5] = useState("");

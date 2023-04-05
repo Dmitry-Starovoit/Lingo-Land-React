@@ -1,0 +1,57 @@
+.text__task--eleven {
+  display: flex;
+  height: 40px;
+  font-size: 18px;
+}
+
+.block__item {
+  background-color: rgb(207, 207, 207, 0.4);
+  padding: 10px;
+  width: 380px;
+}
+
+.block__item + .block__item {
+  margin-top: 40px;
+}
+
+.text__question {
+  width: 300px;
+  height: 55px;
+  font-size: 18px;
+  margin-left: 20px;
+  font-weight: 600;
+}
+.task__block--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox__input {
+  height: 20px;
+  margin-top: 20px;
+  width: 40px;
+  border-radius: 50px;
+}
+.text__task--eleven {
+  margin-left: 5px;
+  width: 400px;
+  margin-top: 10px;
+}
+.text__task--eleven .text {
+  margin-top: 18px;
+  width: 300px;
+}
+
+.task__block--flex img {
+  height: 200px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.img__two {
+  width: 340px;
+}
+
+.text__task--eleven {
+  text-align: left;
+}
