@@ -22,7 +22,7 @@ const TaskElevenSevenPage = (props) => {
   const valueEventListenerTaskFour = (event) => {
     setGetValueTaskFour(event.target.value);
   };
-  props.check(
+  props.valueEventHandlerTask11(
     getValueTaskOne,
     getValueTaskTwo,
     getValueTaskThree,
@@ -37,9 +37,9 @@ const TaskElevenSevenPage = (props) => {
       <div className="task__block--flex">
         <div className="first__column">
           <div className="block__item">
-            <p className="text__question">{props.testData[0].question}</p>
+            <p className="text__question">{props.task11Data[0].question}</p>
             <img src={firstImg} alt="" className="img" />
-            {props.testData[0].answers.map((item, index) => {
+            {props.task11Data[0].answers.map((item, index) => {
               return (
                 <div key={item.id} className="text__task--eleven">
                   <input
@@ -56,9 +56,9 @@ const TaskElevenSevenPage = (props) => {
             })}
           </div>
           <div className="block__item">
-            <p className="text__question">{props.testData[1].question}</p>
+            <p className="text__question">{props.task11Data[1].question}</p>
             <img src={twoImg} alt="" className="img__two" />
-            {props.testData[1].answers.map((item, index) => {
+            {props.task11Data[1].answers.map((item, index) => {
               return (
                 <div key={item.id} className="text__task--eleven">
                   <input
@@ -77,9 +77,9 @@ const TaskElevenSevenPage = (props) => {
         </div>
         <div className="second__column">
           <div className="block__item">
-            <p className="text__question">{props.testData[2].question}</p>
+            <p className="text__question">{props.task11Data[2].question}</p>
             <img src={threeImg} alt="" className="img" />
-            {props.testData[2].answers.map((item, index) => {
+            {props.task11Data[2].answers.map((item, index) => {
               return (
                 <div key={item.id} className="text__task--eleven">
                   <input
@@ -96,9 +96,9 @@ const TaskElevenSevenPage = (props) => {
             })}
           </div>
           <div className="block__item">
-            <p className="text__question">{props.testData[3].question}</p>
+            <p className="text__question">{props.task11Data[3].question}</p>
             <img src={fourImg} alt="" className="img__two" />
-            {props.testData[3].answers.map((item, index) => {
+            {props.task11Data[3].answers.map((item, index) => {
               return (
                 <div key={item.id} className="text__task--eleven">
                   <input

@@ -1,0 +1,11 @@
+.block__twelve--page img {
+  height: 40px;
+}
+.block__twelve--page input {
+  width: 750px;
+}
+
+.block__twelve--page {
+  font-size: 17px;
+  padding: 20px;
+}

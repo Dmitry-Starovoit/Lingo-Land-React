@@ -10,7 +10,7 @@ const TaskTenSixPage = (props) => {
     });
   };
 
-  //props.valueEventHandlerTask10(getValue);
+  props.valueEventHandlerTask10(getValue);
 
   return (
     <>

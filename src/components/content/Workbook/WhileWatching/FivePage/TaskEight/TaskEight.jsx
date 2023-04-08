@@ -1,17 +1,6 @@
 import { useState } from "react";
 import "./TaskEight.css";
 const TaskEightFivePage = (props) => {
-  const dataEightTask = [
-    "Sarabi and I didn't see you at the presentation of Simba.",
-    "Of course I meant no disrespect towards His Majesty or Sarabi.",
-    "Well, look who's come down to mingle with the commoners.",
-    "Must've slipped my mind.",
-    "As the king's brother you should've been first in line.",
-    "Was that today?",
-    "I was first in line Or don't you remember?",
-    "As you know, I have tremendous respect for the queen.",
-  ];
-
   const [getValue, setGetValue] = useState([]);
 
   const valueEventListener = (event) => {
@@ -31,7 +20,7 @@ const TaskEightFivePage = (props) => {
       </div>
       <div className="flex__text__block">
         <div>
-          {dataEightTask.map((item) => {
+          {props.dataEightTask.map((item) => {
             return (
               <div key={Math.random()} className="text__block--eight">
                 <p className="text__task--eight">{item}</p>
