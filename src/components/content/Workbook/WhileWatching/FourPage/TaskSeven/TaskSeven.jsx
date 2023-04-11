@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./TaskSeven.css";
-import imgScar from "../../../../../assets/task7/Scar.jpg";
-import imgZazu from "../../../../../assets/task7/Zazu.jpg";
+import imgScar from "../../../../../../assets/task7/Scar.jpg";
+import imgZazu from "../../../../../../assets/task7/Zazu.jpg";
 const TaskSevenFourPage = (props) => {
   const [getValue, setGetValue] = useState([]);
 

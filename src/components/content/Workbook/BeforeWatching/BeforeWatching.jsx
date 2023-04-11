@@ -40,6 +40,8 @@ const BeforeWatching = () => {
       ) {
         taskResult.add(taskAns[i]);
         console.log(taskResult);
+      } else {
+        taskResult.delete(taskAns[i]);
       }
     }
   };
@@ -73,6 +75,8 @@ const BeforeWatching = () => {
       yBlockOne >= 2738
     ) {
       result.add("one");
+    } else {
+      result.delete("one");
     }
     if (
       xBlockTwo <= 606 &&
@@ -81,6 +85,8 @@ const BeforeWatching = () => {
       yBlockTwo >= 2500
     ) {
       result.add("two");
+    } else {
+      result.delete("two");
     }
     if (
       xBlockThree <= 607 &&
@@ -89,6 +95,8 @@ const BeforeWatching = () => {
       yBlockThree >= 2267
     ) {
       result.add("three");
+    } else {
+      result.delete("three");
     }
     if (
       xBlockFour <= 858 &&
@@ -97,6 +105,8 @@ const BeforeWatching = () => {
       yBlockFour >= 2503
     ) {
       result.add("four");
+    } else {
+      result.delete("four");
     }
     if (
       xBlockFive <= 859 &&
@@ -105,6 +115,8 @@ const BeforeWatching = () => {
       yBlockFive >= 2032
     ) {
       result.add("five");
+    } else {
+      result.delete("five");
     }
     if (
       xBlockSix <= 856 &&
@@ -113,6 +125,8 @@ const BeforeWatching = () => {
       yBlockSix >= 2265
     ) {
       result.add("six");
+    } else {
+      result.delete("six");
     }
     if (
       xBlockSeven <= 860 &&
@@ -121,6 +135,8 @@ const BeforeWatching = () => {
       yBlockSeven >= 2735
     ) {
       result.add("seven");
+    } else {
+      result.delete("seven");
     }
     if (
       xBlockNine <= 608 &&
@@ -129,6 +145,8 @@ const BeforeWatching = () => {
       yBlockNine >= 2032
     ) {
       result.add("eight");
+    } else {
+      result.delete("eight");
     }
   };
 

@@ -1,15 +1,118 @@
-div {
-  color: black;
-}
-
-.dnd-block {
-  color: white;
-  background-color: black;
-  height: 100px;
-  width: 100px;
-}
-
-.formContainer {
+.learn__words--block {
+  background: rgb(180, 180, 180);
   text-align: center;
-  color: black;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  margin-left: 530px;
+}
+
+.card__flip {
+  width: 300px;
+  text-align: center;
+}
+
+.some__class {
+  height: 200px;
+  width: 100px;
+  color: red;
+  background: red;
+  transition: transform 5s ease;
+}
+
+.true__class {
+  transform: rotate(180);
+  background-color: blue;
+}
+.block__eng--slider {
+  width: 300px;
+  height: 100px;
+  background: #001d60;
+  font-size: 40px;
+  color: rgb(228, 228, 228);
+  margin: 20px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 75px;
+}
+
+.block__ukr--slider {
+  width: 300px;
+  height: 100px;
+  background: #001d60;
+  font-size: 40px;
+  color: rgb(228, 228, 228);
+  margin: 20px;
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 75px;
+}
+
+.block__eng--slider p {
+  font-size: 15px;
+  margin-top: -60px;
+  margin-bottom: 20px;
+}
+.block__ukr--slider p {
+  font-size: 15px;
+  margin-top: -60px;
+  margin-bottom: 20px;
+}
+
+.arrows {
+  width: 28px;
+  height: 28px;
+  border-color: #000;
+  margin-top: 100px;
+  cursor: pointer;
+}
+
+.prev {
+  border-bottom: 6px solid;
+  border-left: 6px solid;
+  transform: rotate(45deg);
+}
+
+.next {
+  border-bottom: 6px solid;
+  border-left: 6px solid;
+  transform: rotate(-135deg);
+}
+
+.learn__words--block button {
+  border-radius: 20px;
+  background: #3b5082;
+  color: white;
+}
+
+.mainmenubtn {
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 250px;
+  margin-top: 20px;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+  transition: 1s;
+}
+.dropdown-child {
+  display: none;
+  background-color: none;
+  min-width: 200px;
+}
+.dropdown-child a {
+  color: white;
+  padding: 20px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-child_active {
+  display: block;
 }

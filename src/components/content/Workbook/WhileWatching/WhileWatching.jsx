@@ -14,6 +14,19 @@ const WhileWatching = () => {
     "don't look",
   ];
   let task7Result = new Set();
+  const valueHandler = (taskAns, taskResult, getValue) => {
+    for (let i = 0; i <= taskAns.length; i++) {
+      if (
+        taskAns[i] === getValue[`value${i}`] &&
+        getValue[`value${i}`] !== undefined
+      ) {
+        taskResult.add(taskAns[i]);
+        console.log(taskResult);
+      } else {
+        taskResult.delete(taskAns[i]);
+      }
+    }
+  };
   const valueEventHandlerTask7 = (getValue) => {
     valueHandler(task7Ans, task7Result, getValue);
   };
@@ -110,15 +123,23 @@ const WhileWatching = () => {
   ) => {
     if (getValueTaskOne !== false && getValueTaskOne !== "false") {
       task11Result.add(getValueTaskOne);
+    } else {
+      task11Result.delete(getValueTaskOne);
     }
     if (getValueTaskTwo !== false && getValueTaskTwo !== "false") {
       task11Result.add(getValueTaskTwo);
+    } else {
+      task11Result.delete(getValueTaskTwo);
     }
     if (getValueTaskThree !== false && getValueTaskThree !== "false") {
       task11Result.add(getValueTaskThree);
+    } else {
+      task11Result.delete(getValueTaskThree);
     }
     if (getValueTaskFour !== false && getValueTaskFour !== "false") {
       task11Result.add(getValueTaskFour);
+    } else {
+      task11Result.delete(getValueTaskFour);
     }
   };
   return (

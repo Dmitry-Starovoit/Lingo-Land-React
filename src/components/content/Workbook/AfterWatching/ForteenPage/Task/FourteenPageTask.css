@@ -1,0 +1,17 @@
+.fourteen__page--task {
+  margin-left: 40px;
+  font-size: 18px;
+}
+
+.fourteen__page--block {
+  margin-top: 50px;
+}
+
+.answers__fourteen + .answers__fourteen {
+  margin-top: 10px;
+}
+
+.answers__fourteen .text {
+  margin-left: 10px;
+  font-size: 17px;
+}

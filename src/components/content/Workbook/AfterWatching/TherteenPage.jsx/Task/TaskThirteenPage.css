@@ -1,0 +1,17 @@
+.therteen__page--task {
+  margin-left: 40px;
+  font-size: 18px;
+}
+
+.thirteen__page--block {
+  margin-top: 50px;
+}
+
+.answers__thirteen + .answers__thirteen {
+  margin-top: 10px;
+}
+
+.answers__thirteen .text {
+  margin-left: 10px;
+  font-size: 17px;
+}

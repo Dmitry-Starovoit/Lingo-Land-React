@@ -2,7 +2,14 @@ import TenPage from "./TenPage/TenPage";
 import ElevenPage from "./ElevenPage/ElevenPage";
 import "./AfterWatching.css";
 import TwelvePage from "./TwelvePage/TwelvePage";
-
+import ThirteenPage from "./TherteenPage.jsx/ThirteenPage";
+import FourteenPage from "./ForteenPage/FourteenPage";
+import FifteenPage from "./FifteenPage/FifteenPage";
+import img1 from "../../../../assets/after_watching/img-2-1.jpg";
+import img2 from "../../../../assets/after_watching/img-2-2.jpg";
+import img3 from "../../../../assets/after_watching/img-2-3.jpg";
+import img4 from "../../../../assets/after_watching/img-2-4.jpg";
+import img5 from "../../../../assets/after_watching/img-2-5.jpg";
 const AfterWatching = () => {
   ///////Page10Task1 ///////
   const page10Ans = [
@@ -36,7 +43,9 @@ const AfterWatching = () => {
   const valueHandlerAfter = (inputValues, result) => {
     for (let i = 0; i < inputValues.length; i++) {
       if (inputValues[i].value === inputValues[i].answer) {
-        result.add(inputValues[i].value);
+        result.add(inputValues[i].answer);
+      } else {
+        result.delete(inputValues[i].answer);
       }
     }
     return result;
@@ -104,6 +113,173 @@ const AfterWatching = () => {
     },
   ];
   let page12Result = new Set();
+
+  ///////Task13//////
+  const task13Ans = [
+    {
+      questionText: "The elephant graveyard is ________ and spooky.",
+      answerOptions: [
+        { id: "choose1", answerText: "pleasant", isCorrect: false },
+        { id: "choose1", answerText: "scary", isCorrect: true },
+        { id: "choose1", answerText: "beautiful", isCorrect: false },
+        { id: "choose1", answerText: "relaxing", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "The sun is ________ and bright.",
+      answerOptions: [
+        { id: "choose2", answerText: "dim", isCorrect: false },
+        { id: "choose2", answerText: "dull", isCorrect: false },
+        { id: "choose2", answerText: "shining", isCorrect: true },
+        { id: "choose2", answerText: "cloudy", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "The moon is ________ and full.",
+      answerOptions: [
+        { id: "choose3", answerText: "empty", isCorrect: false },
+        { id: "choose3", answerText: "bright", isCorrect: true },
+        { id: "choose3", answerText: "dark", isCorrect: false },
+        { id: "choose3", answerText: "half-full", isCorrect: false },
+      ],
+    },
+    {
+      questionText: "Zazu is ________ and loyal.",
+      answerOptions: [
+        { id: "choose4", answerText: "treacherous", isCorrect: false },
+        { id: "choose4", answerText: "dishonest", isCorrect: false },
+        { id: "choose4", answerText: "faithful", isCorrect: true },
+        { id: "choose4", answerText: "selfish", isCorrect: false },
+      ],
+    },
+  ];
+
+  const task13Result = new Set();
+
+  ///////Task14//////
+  const task14Ans = [
+    {
+      questionText:
+        "What does Mufasa tell Simba about the balance of the world?",
+      answerOptions: [
+        {
+          id: "choose1",
+          answerText: "Ignore the balance and seize what you want.",
+          isCorrect: false,
+        },
+        {
+          id: "choose1",
+          answerText: "Everything is meaningless.",
+          isCorrect: false,
+        },
+        {
+          id: "choose1",
+          answerText:
+            "The balance of the world is delicate and must be respected.",
+          isCorrect: true,
+        },
+        {
+          id: "choose1",
+          answerText: "The strong should dominate the weak.",
+          isCorrect: false,
+        },
+      ],
+    },
+    {
+      questionText: "Where do Simba and Nala go despite warnings from Zazu?",
+      answerOptions: [
+        {
+          id: "choose2",
+          answerText: "The elephant graveyard.",
+          isCorrect: true,
+        },
+        { id: "choose2", answerText: "The watering hole.", isCorrect: false },
+        { id: "choose2", answerText: "The Pride Lands.", isCorrect: false },
+        { id: "choose2", answerText: "The savannah.", isCorrect: false },
+      ],
+    },
+    {
+      questionText:
+        "Who do Simba and Nala encounter at the elephant graveyard?",
+      answerOptions: [
+        { id: "choose3", answerText: "Mufasa", isCorrect: false },
+        { id: "choose3", answerText: "Timon and Pumbaa", isCorrect: false },
+        { id: "choose3", answerText: "Scar", isCorrect: false },
+        { id: "choose3", answerText: "Hyenas", isCorrect: true },
+      ],
+    },
+    {
+      questionText: "What does Scar tell Simba about the elephant graveyard?",
+      answerOptions: [
+        {
+          id: "choose4",
+          answerText: "It's a wonderful place full of adventure and fun!",
+          isCorrect: false,
+        },
+        {
+          id: "choose4",
+          answerText: "It's a dangerous place.",
+          isCorrect: true,
+        },
+        {
+          id: "choose4",
+          answerText: "It's a sacred place where no lion should ever go.",
+          isCorrect: false,
+        },
+        {
+          id: "choose4",
+          answerText: "It's a boring place with nothing to see or do.",
+          isCorrect: false,
+        },
+      ],
+    },
+  ];
+  const task14Result = new Set();
+  /////task15//////
+  const page15Task1Ans = ["do", "is", "wants", "teaches", "rises", "want"];
+  const page15Task1Result = new Set();
+  const valueHandler = (taskAns, taskResult, getValue) => {
+    for (let i = 0; i <= taskAns.length; i++) {
+      if (
+        taskAns[i] === getValue[`value${i}`] &&
+        getValue[`value${i}`] !== undefined
+      ) {
+        taskResult.add(taskAns[i]);
+        console.log(taskResult);
+      } else {
+        taskResult.delete(taskAns[i]);
+      }
+    }
+  };
+  /////task15//////
+  const page15Task2Ans = [
+    {
+      img: img1,
+      value: "",
+      answer: "Zazy and Scar",
+    },
+    {
+      img: img2,
+      value: "",
+      answer: "Nala and Simba",
+    },
+    {
+      img: img3,
+      value: "",
+      answer: "Simba",
+    },
+    {
+      img: img4,
+      value: "",
+      answer: "Sarabi",
+    },
+    {
+      img: img5,
+      value: "",
+      answer: "Mufasa",
+    },
+  ];
+  const page15Task2Result = new Set();
   return (
     <div className="after__watching">
       <TenPage
@@ -120,6 +296,16 @@ const AfterWatching = () => {
         page12Result={page12Result}
         valueHandlerAfter={valueHandlerAfter}
         page12Ans={page12Ans}
+      />
+      <ThirteenPage task13Ans={task13Ans} task13Result={task13Result} />
+      <FourteenPage task14Ans={task14Ans} task14Result={task14Result} />
+      <FifteenPage
+        page15Task1Ans={page15Task1Ans}
+        page15Task1Result={page15Task1Result}
+        valueHandler={valueHandler}
+        page15Task2Result={page15Task2Result}
+        valueHandlerAfter={valueHandlerAfter}
+        page15Task2Ans={page15Task2Ans}
       />
     </div>
   );

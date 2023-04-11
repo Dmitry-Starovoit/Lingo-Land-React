@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "./TaskEleven.css";
-import firstImg from "../../../../../assets/task11/first-img.jpg";
-import twoImg from "../../../../../assets/task11/second-img.jpg";
-import threeImg from "../../../../../assets/task11/three-img.jpg";
-import fourImg from "../../../../../assets/task11/four-img.jpg";
+import firstImg from "../../../../../../assets/task11/first-img.jpg";
+import twoImg from "../../../../../../assets/task11/second-img.jpg";
+import threeImg from "../../../../../../assets/task11/three-img.jpg";
+import fourImg from "../../../../../../assets/task11/four-img.jpg";
 const TaskElevenSevenPage = (props) => {
   const [getValueTaskOne, setGetValueTaskOne] = useState(false);
   const [getValueTaskTwo, setGetValueTaskTwo] = useState(false);
