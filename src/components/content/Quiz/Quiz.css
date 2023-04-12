@@ -1,12 +1,23 @@
 .learn__words--block {
-  background: rgb(180, 180, 180);
+  background: rgb(53, 53, 53);
+  background: linear-gradient(
+    90deg,
+    rgba(53, 53, 53, 1) 0%,
+    rgba(122, 122, 122) 50%,
+    rgba(53, 53, 53, 1) 100%
+  );
   text-align: center;
-  margin: 0 auto;
+  margin: 0;
+}
+
+.learn__words--block h1 {
+  margin: 0;
+  padding-top: 20px;
 }
 
 .slider {
   display: flex;
-  margin-left: 530px;
+  justify-content: center;
 }
 
 .card__flip {
@@ -26,48 +37,34 @@
   transform: rotate(180);
   background-color: blue;
 }
-.block__eng--slider {
-  width: 300px;
-  height: 100px;
-  background: #001d60;
-  font-size: 40px;
-  color: rgb(228, 228, 228);
-  margin: 20px;
+.block__slider {
+  width: 500px;
+  height: 300px;
+  background: #ffd943;
+  color: rgb(100, 100, 100);
+  border: 3px solid gray;
   border-radius: 20px;
   text-align: center;
-  padding: 20px;
-  padding-top: 75px;
+  position: relative;
 }
 
-.block__ukr--slider {
-  width: 300px;
-  height: 100px;
-  background: #001d60;
+.block__child {
   font-size: 40px;
-  color: rgb(228, 228, 228);
-  margin: 20px;
-  border-radius: 20px;
-  text-align: center;
-  padding: 20px;
-  padding-top: 75px;
-}
-
-.block__eng--slider p {
-  font-size: 15px;
-  margin-top: -60px;
-  margin-bottom: 20px;
-}
-.block__ukr--slider p {
-  font-size: 15px;
-  margin-top: -60px;
-  margin-bottom: 20px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 30%;
+  margin: auto;
 }
 
 .arrows {
   width: 28px;
   height: 28px;
-  border-color: #000;
-  margin-top: 100px;
+  color: rgb(156, 156, 156);
+  margin-top: 150px;
   cursor: pointer;
 }
 
@@ -85,13 +82,15 @@
 
 .learn__words--block button {
   border-radius: 20px;
-  background: #3b5082;
-  color: white;
+  border: 2px solid gray;
+  border-radius: 20px;
+  background: #fecc05;
+  color: rgb(72, 72, 72);
 }
 
 .mainmenubtn {
   background-color: red;
-  color: white;
+  color: gray;
   border: none;
   cursor: pointer;
   width: 250px;
@@ -108,11 +107,22 @@
   min-width: 200px;
 }
 .dropdown-child a {
-  color: white;
+  color: gray;
   padding: 20px;
   text-decoration: none;
   display: block;
 }
 .dropdown-child_active {
   display: block;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.score__numbers {
+  text-align: center;
+}
+.score__numbers p {
+  margin: 0;
 }

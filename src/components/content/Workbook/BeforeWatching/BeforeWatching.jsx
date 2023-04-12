@@ -50,103 +50,18 @@ const BeforeWatching = () => {
 
   const result = new Set();
 
-  const checkAns = (
-    xBlockOne,
-    yBlockOne,
-    xBlockTwo,
-    yBlockTwo,
-    xBlockThree,
-    yBlockThree,
-    xBlockFour,
-    yBlockFour,
-    xBlockFive,
-    yBlockFive,
-    xBlockSix,
-    yBlockSix,
-    xBlockSeven,
-    yBlockSeven,
-    xBlockNine,
-    yBlockNine
-  ) => {
-    if (
-      xBlockOne <= 615 &&
-      xBlockOne >= 570 &&
-      yBlockOne <= 2778 &&
-      yBlockOne >= 2738
-    ) {
-      result.add("one");
-    } else {
-      result.delete("one");
-    }
-    if (
-      xBlockTwo <= 606 &&
-      xBlockTwo >= 566 &&
-      yBlockTwo <= 2540 &&
-      yBlockTwo >= 2500
-    ) {
-      result.add("two");
-    } else {
-      result.delete("two");
-    }
-    if (
-      xBlockThree <= 607 &&
-      xBlockThree >= 567 &&
-      yBlockThree <= 2307 &&
-      yBlockThree >= 2267
-    ) {
-      result.add("three");
-    } else {
-      result.delete("three");
-    }
-    if (
-      xBlockFour <= 858 &&
-      xBlockFour >= 818 &&
-      yBlockFour <= 2543 &&
-      yBlockFour >= 2503
-    ) {
-      result.add("four");
-    } else {
-      result.delete("four");
-    }
-    if (
-      xBlockFive <= 859 &&
-      xBlockFive >= 819 &&
-      yBlockFive <= 2072 &&
-      yBlockFive >= 2032
-    ) {
-      result.add("five");
-    } else {
-      result.delete("five");
-    }
-    if (
-      xBlockSix <= 856 &&
-      xBlockSix >= 816 &&
-      yBlockSix <= 2305 &&
-      yBlockSix >= 2265
-    ) {
-      result.add("six");
-    } else {
-      result.delete("six");
-    }
-    if (
-      xBlockSeven <= 860 &&
-      xBlockSeven >= 820 &&
-      yBlockSeven <= 2775 &&
-      yBlockSeven >= 2735
-    ) {
-      result.add("seven");
-    } else {
-      result.delete("seven");
-    }
-    if (
-      xBlockNine <= 608 &&
-      xBlockNine >= 568 &&
-      yBlockNine <= 2072 &&
-      yBlockNine >= 2032
-    ) {
-      result.add("eight");
-    } else {
-      result.delete("eight");
+  const checkAns = (pageTwoData) => {
+    for (let i = 0; i < pageTwoData.length; i++) {
+      if (
+        pageTwoData[i].x <= pageTwoData[i].maxX &&
+        pageTwoData[i].x >= pageTwoData[i].minX &&
+        pageTwoData[i].y <= pageTwoData[i].maxY &&
+        pageTwoData[i].y >= pageTwoData[i].minY
+      ) {
+        result.add(i);
+      } else {
+        result.delete(i);
+      }
     }
   };
 

@@ -51,7 +51,7 @@ const Footer = function () {
               <Link to="/contacts">Contacts</Link>
             </li>
             <li className="nav__footer--item">
-              <Link to="/feedback">Feedback</Link>
+              <Link to="/quiz">Quiz</Link>
             </li>
           </ul>
         </div>

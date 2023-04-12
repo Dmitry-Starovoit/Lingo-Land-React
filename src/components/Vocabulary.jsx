@@ -4,7 +4,7 @@ import { addWord } from "../store/actions";
 import "./Vocabullary.css";
 
 const Vocabulary = function () {
-  const words = useSelector((state) => state.wordsObj);
+  const words = useSelector((state) => state.VocabullaryReducer.wordsObj);
   const dispatch = useDispatch();
 
   const [valueEng, setValueEng] = useState("");

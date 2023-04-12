@@ -1,179 +1,110 @@
 import { useState } from "react";
 const AnswerBlock = (props) => {
-  const [xBlockOne, setXBlockOne] = useState(350);
-  const [yBlockOne, setYBlockOne] = useState(1950);
-  const [xBlockTwo, setXBlockTwo] = useState(350);
-  const [yBlockTwo, setYBlockTwo] = useState(2050);
-  const [xBlockThree, setXBlockThree] = useState(350);
-  const [yBlockThree, setYBlockThree] = useState(2150);
-  const [xBlockFour, setXBlockFour] = useState(350);
-  const [yBlockFour, setYBlockFour] = useState(2250);
-  const [xBlockFive, setXBlockFive] = useState(350);
-  const [yBlockFive, setYBlockFive] = useState(2350);
-  const [xBlockSix, setXBlockSix] = useState(350);
-  const [yBlockSix, setYBlockSix] = useState(2450);
-  const [xBlockSeven, setXBlockSeven] = useState(350);
-  const [yBlockSeven, setYBlockSeven] = useState(2550);
-  const [xBlockNine, setXBlockNine] = useState(350);
-  const [yBlockNine, setYBlockNine] = useState(2650);
+  const pageTwoData = [
+    {
+      x: 350,
+      y: 1950,
+      value: "LION CUB",
+      maxX: 605,
+      minX: 570,
+      maxY: 2775,
+      minY: 2780,
+    },
+    {
+      x: 350,
+      y: 2050,
+      value: "BEE",
+      maxX: 605,
+      minX: 570,
+      maxY: 2540,
+      minY: 2500,
+    },
+    {
+      x: 350,
+      y: 2150,
+      value: "BEAK",
+      maxX: 605,
+      minX: 570,
+      maxY: 2305,
+      minY: 2265,
+    },
+    {
+      x: 350,
+      y: 2250,
+      value: "ANT",
+      maxX: 860,
+      minX: 820,
+      maxY: 2540,
+      minY: 2500,
+    },
+    {
+      x: 350,
+      y: 2350,
+      value: "HYENA",
+      maxX: 860,
+      minX: 820,
+      maxY: 2075,
+      minY: 2035,
+    },
+    {
+      x: 350,
+      y: 2450,
+      value: "PROTECT",
+      maxX: 860,
+      minX: 820,
+      maxY: 2305,
+      minY: 2265,
+    },
+    {
+      x: 350,
+      y: 2550,
+      value: "POUNCE",
+      maxX: 860,
+      minX: 820,
+      maxY: 2775,
+      minY: 2735,
+    },
+    {
+      x: 350,
+      y: 2650,
+      value: "HUNT",
+      maxX: 605,
+      minX: 570,
+      maxY: 2075,
+      minY: 2035,
+    },
+  ];
 
-  const handleDragEndOne = (event) => {
-    setXBlockOne(event.pageX);
-    setYBlockOne(event.pageY);
-    console.log(event.pageX, event.pageY);
+  const [coordinate, setCoordinate] = useState(pageTwoData);
+
+  const handleInputChange = (index, x, y) => {
+    const newInputValues = [...coordinate];
+    newInputValues[index].x = x;
+    newInputValues[index].y = y;
+    setCoordinate(newInputValues);
   };
 
-  const handleDragEndTwo = (event) => {
-    setXBlockTwo(event.pageX);
-    setYBlockTwo(event.pageY);
-    console.log(xBlockTwo, yBlockTwo);
-  };
+  props.checkAns(coordinate);
 
-  const handleDragEndThree = (event) => {
-    setXBlockThree(event.pageX);
-    setYBlockThree(event.pageY);
-    console.log(event.pageX, event.pageX);
-  };
-
-  const handleDragEndFour = (event) => {
-    setXBlockFour(event.pageX);
-    setYBlockFour(event.pageY);
-    console.log(event.pageX, event.pageX);
-  };
-
-  const handleDragEndFive = (event) => {
-    setXBlockFive(event.pageX);
-    setYBlockFive(event.pageY);
-    console.log(event.pageX, event.pageY);
-  };
-
-  const handleDragEndSix = (event) => {
-    setXBlockSix(event.pageX);
-    setYBlockSix(event.pageY);
-    console.log(event.pageX, event.pageX);
-  };
-
-  const handleDragEndSeven = (event) => {
-    setXBlockSeven(event.pageX);
-    setYBlockSeven(event.pageY);
-    console.log(event.pageX, event.pageX);
-  };
-
-  const handleDragEndNine = (event) => {
-    event.preventDefault();
-    setXBlockNine(event.pageX);
-    setYBlockNine(event.pageY);
-    console.log(event.pageX, event.pageX);
-  };
-
-  props.checkAns(
-    xBlockOne,
-    yBlockOne,
-    xBlockTwo,
-    yBlockTwo,
-    xBlockThree,
-    yBlockThree,
-    xBlockFour,
-    yBlockFour,
-    xBlockFive,
-    yBlockFive,
-    xBlockSix,
-    yBlockSix,
-    xBlockSeven,
-    yBlockSeven,
-    xBlockNine,
-    yBlockNine
-  );
   return (
     <>
-      <div
-        style={{
-          left: xBlockOne,
-          top: yBlockOne,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndOne}
-      >
-        LION CUB
-      </div>
-      <div
-        style={{
-          left: xBlockTwo,
-          top: yBlockTwo,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndTwo}
-      >
-        BEE
-      </div>
-      <div
-        style={{
-          left: xBlockThree,
-          top: yBlockThree,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndThree}
-      >
-        BEAK
-      </div>
-      <div
-        style={{
-          left: xBlockFour,
-          top: yBlockFour,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndFour}
-      >
-        ANT
-      </div>
-      <div
-        style={{
-          left: xBlockFive,
-          top: yBlockFive,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndFive}
-      >
-        HYENA
-      </div>
-      <div
-        style={{
-          left: xBlockSix,
-          top: yBlockSix,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndSix}
-      >
-        PROTECT
-      </div>
-      <div
-        style={{
-          left: xBlockSeven,
-          top: yBlockSeven,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndSeven}
-      >
-        POUNCE
-      </div>
-      <div
-        style={{
-          left: xBlockNine,
-          top: yBlockNine,
-        }}
-        className="block--89"
-        draggable={true}
-        onDragEnd={handleDragEndNine}
-      >
-        HUNT
-      </div>
+      {coordinate.map((item, index) => {
+        return (
+          <div
+            style={{
+              left: item.x,
+              top: item.y,
+            }}
+            className="block--89"
+            draggable={true}
+            onDragEnd={(event) =>
+              handleInputChange(index, event.pageX, event.pageY)
+            }
+          >
+            {item.value}
+          </div>
+        );
+      })}
     </>
   );
 };

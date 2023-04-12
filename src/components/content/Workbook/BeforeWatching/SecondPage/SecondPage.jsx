@@ -34,7 +34,6 @@ const SecondPage = (props) => {
         ? `Correct ${props.result.size}/${"8"}`
         : `All are correct!`
     );
-    console.log(props.result.length);
   };
 
   return (

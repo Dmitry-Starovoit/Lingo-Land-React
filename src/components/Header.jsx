@@ -23,7 +23,7 @@ const Header = function () {
             <Link to="/contacts">Contacts</Link>
           </li>
           <li className="nav__item">
-            <Link to="/feedback">Feedback</Link>
+            <Link to="/quiz">Quiz</Link>
           </li>
         </ul>
       </div>
