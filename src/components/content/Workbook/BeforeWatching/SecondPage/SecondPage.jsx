@@ -39,7 +39,11 @@ const SecondPage = (props) => {
   return (
     <div className="page__second">
       <h1>Before Watching</h1>
-      <TaskOneSecondPage images={images} checkAns={props.checkAns} />
+      <TaskOneSecondPage
+        twoData={props.twoData}
+        images={images}
+        checkAns={props.checkAns}
+      />
       <h4>{changeTextTask1}</h4>
       <div className="button__div">
         <button onClick={changeTextFunc}>Check Answer</button>

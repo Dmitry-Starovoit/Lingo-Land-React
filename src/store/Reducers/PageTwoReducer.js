@@ -1,7 +1,5 @@
-import { useState } from "react";
-
-const AnswerBlock = (props) => {
-  const twoData = [
+const initialState = {
+  coordinate: [
     {
       x: 350,
       y: 1950,
@@ -74,39 +72,17 @@ const AnswerBlock = (props) => {
       maxY: 2075,
       minY: 2035,
     },
-  ];
-  const [coordinate, setCoordinate] = useState(twoData);
-
-  const handleInputChange = (index, x, y) => {
-    const newInputValues = [...coordinate];
-    newInputValues[index].x = x;
-    newInputValues[index].y = y;
-    setCoordinate(newInputValues);
-  };
-
-  props.checkAns(coordinate);
-
-  return (
-    <>
-      {coordinate.map((item, index) => {
-        return (
-          <div
-            style={{
-              left: item.x,
-              top: item.y,
-            }}
-            className="block--89"
-            draggable={true}
-            onDragEnd={(event) =>
-              handleInputChange(index, event.pageX, event.pageY)
-            }
-          >
-            {item.value}
-          </div>
-        );
-      })}
-    </>
-  );
+  ],
 };
 
-export default AnswerBlock;
+export function coordinateReducer(state = initialState, action) {
+  switch (action.type) {
+    case "SET_COORDINATE":
+      return {
+        ...state,
+        coordinate: action.payload,
+      };
+    default:
+      return state;
+  }
+}

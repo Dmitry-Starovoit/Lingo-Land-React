@@ -6,6 +6,7 @@ import "./Vocabullary.css";
 const Vocabulary = function () {
   const words = useSelector((state) => state.VocabullaryReducer.wordsObj);
   const dispatch = useDispatch();
+  console.log(words);
 
   const [valueEng, setValueEng] = useState("");
   const [valueUkr, setValueUkr] = useState("");

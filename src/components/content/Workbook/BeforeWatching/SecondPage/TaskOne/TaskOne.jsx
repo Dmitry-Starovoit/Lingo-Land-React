@@ -11,7 +11,7 @@ const TaskOneSecondPage = (props) => {
             4. Match the pictures with the words
           </h3>
           <ImagesBlock images={props.images} />
-          <AnswerBlock checkAns={props.checkAns} />
+          <AnswerBlock twoData={props.twoData} checkAns={props.checkAns} />
         </div>
       </div>
     </>

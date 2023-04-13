@@ -1,11 +1,11 @@
 import { combineReducers, legacy_createStore } from "redux";
 import { CardReducer, VocabullaryReducer } from "./Reducers/VocabullaryReducer";
-import { PageTwoLionKing } from "./Reducers/PageTwoLionKing";
+import { coordinateReducer } from "./Reducers/PageTwoReducer";
 
 const combineReducer = combineReducers({
   VocabullaryReducer,
   CardReducer,
-  PageTwoLionKing,
+  coordinateReducer,
 });
 
 const store = legacy_createStore(combineReducer);

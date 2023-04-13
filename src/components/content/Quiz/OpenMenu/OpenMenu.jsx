@@ -15,6 +15,7 @@ const OpenMenu = (props) => {
         }
       >
         <button
+          class="mainmenubtn__item"
           onClick={() => {
             props.randomFunc(5);
           }}
@@ -22,6 +23,7 @@ const OpenMenu = (props) => {
           5word
         </button>
         <button
+          class="mainmenubtn__item"
           onClick={() => {
             props.randomFunc(10);
           }}
@@ -29,6 +31,7 @@ const OpenMenu = (props) => {
           10word
         </button>
         <button
+          class="mainmenubtn__item"
           onClick={() => {
             props.randomFunc(15);
           }}
@@ -36,6 +39,7 @@ const OpenMenu = (props) => {
           15word
         </button>
         <button
+          class="mainmenubtn__item"
           onClick={() => {
             props.randomFunc(20);
           }}
@@ -43,6 +47,7 @@ const OpenMenu = (props) => {
           20word
         </button>
         <button
+          class="mainmenubtn__item"
           onClick={() => {
             props.randomFunc(25);
           }}

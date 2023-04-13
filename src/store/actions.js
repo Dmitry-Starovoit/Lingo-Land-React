@@ -20,13 +20,7 @@ export const cardWord = (word) => {
   };
 };
 
-export const CHECK_PAGE_TWO = "CHECK_PAGE_TWO";
-
-// Action Creator
-export const checkPageTwo = (coordinate) => {
-  return {
-    type: CHECK_PAGE_TWO,
-
-    payload: coordinate,
-  };
-};
+export const setCoordinate = (coordinate) => ({
+  type: "SET_COORDINATE",
+  payload: coordinate,
+});

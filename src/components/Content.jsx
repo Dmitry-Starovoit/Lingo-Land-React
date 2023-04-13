@@ -1,17 +1,23 @@
 import "./Content.css";
+import Footer from "./Footer";
+import Header from "./Header";
 import ContentBlockOne from "./content/ContentBlockOne";
 import ContentBlockTwo from "./content/ContentBlockTwo";
 import ContentHeader from "./content/ContentHeader";
 
 const Content = function () {
   return (
-    <div>
-      <ContentHeader />
-      <div className="content__block">
-        <ContentBlockOne />
-        <ContentBlockTwo />
+    <>
+      <Header />
+      <div>
+        <ContentHeader />
+        <div className="content__block">
+          <ContentBlockOne />
+          <ContentBlockTwo />
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 };
 
