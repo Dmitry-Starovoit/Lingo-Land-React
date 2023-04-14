@@ -7,7 +7,7 @@ const initialState = {
       maxX: 605,
       minX: 570,
       maxY: 2775,
-      minY: 2780,
+      minY: 2735,
     },
     {
       x: 350,

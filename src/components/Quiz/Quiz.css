@@ -1,0 +1,158 @@
+.learn__words--block {
+  background: rgb(252, 252, 252);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+}
+
+.progress {
+  display: flex;
+  justify-content: center;
+  height: 100px;
+  margin-top: -20px;
+}
+
+.card__flip {
+  width: 300px;
+  text-align: center;
+}
+
+.some__class {
+  height: 200px;
+  width: 100px;
+  color: red;
+  background: red;
+  transition: transform 5s ease;
+}
+
+.true__class {
+  transform: rotate(180);
+  background-color: blue;
+}
+.block__slider {
+  width: 500px;
+  height: 300px;
+  background: #ffd943;
+  color: rgb(100, 100, 100);
+  border: 3px solid gray;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+}
+
+.block__child {
+  font-size: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 50%;
+  height: 30%;
+  margin: auto;
+}
+
+.learn__words--block button {
+  border-radius: 20px;
+  border-radius: 20px;
+  background: #fecc05;
+  color: rgb(72, 72, 72);
+}
+
+.learn__words--block .mainmenubtn:hover {
+  background: #ffdb4c;
+  box-shadow: none;
+  height: 50px;
+  width: 250px;
+}
+
+.mainmenubtn {
+  border: none;
+  cursor: pointer;
+  height: 50px;
+  width: 250px;
+  margin-top: 20px;
+  border-bottom: 5px solid #d5aa00;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-child {
+  display: none;
+  background-color: none;
+}
+
+.dropdown-child_active {
+  display: block;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0%;
+  overflow-y: hidden;
+}
+
+.score__numbers {
+  text-align: center;
+}
+
+.block__slider--text {
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.dropdown-child button + button {
+  margin-left: 10px;
+}
+
+.score__numbers button + button {
+  margin-left: 20px;
+}
+
+.score__item {
+  height: 25px;
+  background-color: #dedede;
+  border-radius: 20px;
+  width: 700px;
+  margin: 0 auto;
+}
+
+.color {
+  color: #d5aa00;
+  height: 25px;
+  width: 700px;
+}
+
+.result__words--block {
+  color: gray;
+  text-align: center;
+}
+
+.result__block--flex {
+  display: flex;
+  justify-content: center;
+}
+
+.result__block--flex div + div {
+  margin-left: 80px;
+}
+
+.result__block--flex div {
+  margin-top: 70px;
+  background-color: white;
+  width: 150px;
+  border-radius: 20px;
+}
+
+.result__block {
+  background-color: #ececec;
+  width: 450px;
+  height: 200px;
+  margin: 0 auto;
+  border-radius: 20px;
+}

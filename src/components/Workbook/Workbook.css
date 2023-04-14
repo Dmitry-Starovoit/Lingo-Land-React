@@ -1,0 +1,15 @@
+.content__workbook {
+  width: 860px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.workbook__wrapper {
+  background: rgb(53, 53, 53);
+  background: linear-gradient(
+    90deg,
+    rgb(255, 232, 104) 0%,
+    rgb(255, 243, 174) 50%,
+    rgba(255, 232, 104) 100%
+  );
+}

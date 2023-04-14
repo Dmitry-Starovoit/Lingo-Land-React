@@ -1,0 +1,50 @@
+.header__workbook {
+  color: rgb(100, 100, 100);
+  text-align: center;
+  margin: 0 auto;
+}
+
+.workbook__header {
+  background-color: #fb9f2f;
+  height: 75px;
+  -webkit-box-shadow: 0px 2px 6px 0px rgba(138, 138, 138, 1);
+  -moz-box-shadow: 0px 2px 6px 0px rgba(138, 138, 138, 1);
+  box-shadow: 0px 2px 6px 0px rgba(138, 138, 138, 1);
+}
+
+.header__text--workbook {
+  color: rgb(82, 82, 82);
+}
+
+.workbook__header--content {
+  width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo--workbook {
+  height: 50px;
+}
+
+.header__text--workbook {
+  color: blach;
+  font-size: 20px;
+  padding-left: 10px;
+}
+
+.workbook__left {
+  padding-top: 12px;
+  display: flex;
+}
+
+.header__exit--workbook {
+  margin-top: 20px;
+  height: 30px;
+  -webkit-transition: -webkit-transform 0.6s ease-in-out;
+  transition: transform 0.6s ease-in-out;
+}
+.header__exit--workbook:hover {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}

@@ -1,12 +1,10 @@
 import "./App.css";
 import Content from "./components/Content";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Vocabulary from "./components/Vocabulary";
 import Contacts from "./components/Contacts";
-import Workbook from "./components/content/Workbook/Workbook";
-import Quiz from "./components/content/Quiz/Quiz";
+import Workbook from "./components/Workbook/Workbook";
+import Quiz from "./components/Quiz/Quiz";
 
 function App() {
   return (

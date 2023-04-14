@@ -5,7 +5,7 @@ const initialState = {
       engWord: "feast",
     },
     {
-      ukrWord: "шматок, частина, недоїдки",
+      ukrWord: "шматок, недоїдки",
       engWord: "scrap",
     },
     {
@@ -41,7 +41,7 @@ const initialState = {
       engWord: "respect",
     },
     {
-      ukrWord: "в напрямку, до, назустріч",
+      ukrWord: "в напрямку, назустріч",
       engWord: "towards",
     },
     {
@@ -141,7 +141,7 @@ const initialState = {
       engWord: "bee",
     },
     {
-      ukrWord: "дитина (про тварин)",
+      ukrWord: "дитина (тварини)",
       engWord: "cub",
     },
     {
@@ -185,7 +185,7 @@ const initialState = {
       engWord: "upon",
     },
     {
-      ukrWord: "людина з народу (просто людина)",
+      ukrWord: "людина з народу",
       engWord: "commoner",
     },
     {
