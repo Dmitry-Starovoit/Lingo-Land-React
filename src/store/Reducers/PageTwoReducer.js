@@ -1,6 +1,7 @@
 const initialState = {
   coordinate: [
     {
+      id: 1,
       x: 350,
       y: 1950,
       value: "LION CUB",
@@ -10,6 +11,7 @@ const initialState = {
       minY: 2735,
     },
     {
+      id: 2,
       x: 350,
       y: 2050,
       value: "BEE",
@@ -19,6 +21,7 @@ const initialState = {
       minY: 2500,
     },
     {
+      id: 3,
       x: 350,
       y: 2150,
       value: "BEAK",
@@ -28,6 +31,7 @@ const initialState = {
       minY: 2265,
     },
     {
+      id: 4,
       x: 350,
       y: 2250,
       value: "ANT",
@@ -37,6 +41,7 @@ const initialState = {
       minY: 2500,
     },
     {
+      id: 5,
       x: 350,
       y: 2350,
       value: "HYENA",
@@ -46,6 +51,7 @@ const initialState = {
       minY: 2035,
     },
     {
+      id: 6,
       x: 350,
       y: 2450,
       value: "PROTECT",
@@ -55,6 +61,7 @@ const initialState = {
       minY: 2265,
     },
     {
+      id: 7,
       x: 350,
       y: 2550,
       value: "POUNCE",
@@ -64,6 +71,7 @@ const initialState = {
       minY: 2735,
     },
     {
+      id: 8,
       x: 350,
       y: 2650,
       value: "HUNT",

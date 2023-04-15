@@ -3,12 +3,15 @@ import "./FivePage.css";
 import { useState } from "react";
 
 const FivePage = (props) => {
+  const task8Data = props.state.page5Reducer.task8Data;
+  let task8Result = new Set();
+
   const [changeTextTask8, setChangeTextTask8] = useState("");
 
   const changeTextFunc = () => {
     setChangeTextTask8(
-      props.task8Result.size < 8
-        ? `Correct ${props.task8Result.size}/${props.task8Ans.length}`
+      task8Result.size < task8Data.length
+        ? `Correct ${task8Result.size}/${task8Data.length}`
         : `All are correct!`
     );
   };
@@ -17,8 +20,9 @@ const FivePage = (props) => {
     <div className="page__five">
       <h1>While Watching</h1>
       <TaskEightFivePage
-        valueEventHandlerTask8={props.valueEventHandlerTask8}
-        dataEightTask={props.dataEightTask}
+        valueHandlerAfter={props.valueHandlerAfter}
+        task8Data={task8Data}
+        task8Result={task8Result}
       />
       <h4>{changeTextTask8}</h4>
       <div className="button__div">

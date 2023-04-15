@@ -12,13 +12,13 @@ const FourteenPageTask = (props) => {
 
   return (
     <div className="fourteen__page--task">
-      {props.task14Ans.map((items) => {
+      {props.task14Ans.map((items, index) => {
         return (
-          <div className="fourteen__page--block">
+          <div key={index} className="fourteen__page--block">
             <p className="question__text">{items.questionText}</p>
-            {items.answerOptions.map((items) => {
+            {items.answerOptions.map((items, index) => {
               return (
-                <div className="answers__fourteen">
+                <div key={index} className="answers__fourteen">
                   <input
                     className="checkbox__input"
                     type="radio"

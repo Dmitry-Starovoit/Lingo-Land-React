@@ -1,16 +1,15 @@
-import { useState } from "react";
 import "./TaskTen.css";
+import { useDispatch } from "react-redux";
+import { getValueTask10 } from "../../../../../store/actions";
 const TaskTenSixPage = (props) => {
-  const [getValue, setGetValue] = useState([]);
+  const dispatch = useDispatch();
 
-  const valueEventListener = (event) => {
-    setGetValue({
-      ...getValue,
-      [event.target.name]: new String(event.target.value).toLowerCase(),
-    });
+  const handleInputChange = (index, value) => {
+    const newInputValues = [...props.task10Data];
+    newInputValues[index].value = value;
+    dispatch(getValueTask10(newInputValues));
   };
-
-  props.valueEventHandlerTask10(getValue);
+  props.valueHandlerAfter(props.task10Data, props.task10Result);
 
   return (
     <>
@@ -19,46 +18,19 @@ const TaskTenSixPage = (props) => {
           10.Watch 11:40-13:39 and find the translation to these phrases
         </h3>
       </div>
-      <div className="task__block--ten">
-        <p className="task__text">
-          Все, до чого торкається світло, це наше царство
-        </p>
-        <input
-          name="value0"
-          value={getValue.value0 || ""}
-          onChange={valueEventListener}
-          id="input__task10--0"
-          type="text"
-        />
-        <p className="task__text">Все це буде належати мені?</p>
-        <input
-          name="value1"
-          value={getValue.value1 || ""}
-          onChange={valueEventListener}
-          id="input__task10--1"
-          type="text"
-        />
-        <p className="task__text">
-          Справжній король шукає те, що він може дати.
-        </p>
-        <input
-          name="value2"
-          value={getValue.value2 || ""}
-          onChange={valueEventListener}
-          id="input__task10--2"
-          type="text"
-        />
-        <p className="task__text">
-          Коли ми вмираємо, наші тіла стають травою і антилопи, їдять траву...
-        </p>
-        <input
-          name="value3"
-          value={getValue.value3 || ""}
-          onChange={valueEventListener}
-          id="input__task10--3"
-          type="text"
-        />
-      </div>
+      {props.task10Data.map((item, index) => {
+        return (
+          <div key={index} className="task__block--ten">
+            <p className="task__text">{item.textAfter}</p>
+            <input
+              value={item.value}
+              onChange={(e) => handleInputChange(index, e.target.value)}
+              id={item.id}
+              type="text"
+            />
+          </div>
+        );
+      })}
     </>
   );
 };

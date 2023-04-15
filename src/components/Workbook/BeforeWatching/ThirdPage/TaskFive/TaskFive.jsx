@@ -1,79 +1,35 @@
+import { useDispatch } from "react-redux";
 import "./TaskFive.css";
-import { useState } from "react";
+import { getValueTask5 } from "../../../../../store/actions";
 const TaskFiveThirdPage = (props) => {
-  const [getValue, setGetValue] = useState([]);
+  const dispatch = useDispatch();
 
-  const valueEventListener = (event) => {
-    setGetValue({
-      ...getValue,
-      [event.target.name]: new String(event.target.value).toLowerCase(),
-    });
+  const handleInputChange = (index, value) => {
+    const newInputValues = [...props.task5Data];
+    newInputValues[index].value = value;
+    dispatch(getValueTask5(newInputValues));
   };
-  props.valueEventHandlerTask5(getValue);
+
+  props.valueHandlerAfter(props.task5Data, props.task5Result);
   return (
     <>
       <div className="task__title">
         <h3 className="task__title--text">5. Guess what it is</h3>
       </div>
       <div className="task__five">
-        <p className="task__five--text">1. Something moist and soft.</p>
-        <input
-          name="value0"
-          value={getValue.value0 || ""}
-          onChange={valueEventListener}
-          id="0"
-          type="text"
-          className="task__five--input"
-        />
-        <p className="task__five--text">2. The home of a wild animal.</p>
-        <input
-          name="value1"
-          value={getValue.value1 || ""}
-          onChange={valueEventListener}
-          id="1"
-          type="text"
-          className="task__five--input"
-        />
-        <p className="task__five--text">3. The opposite of good.</p>
-        <input
-          name="value2"
-          value={getValue.value2 || ""}
-          onChange={valueEventListener}
-          id="2"
-          type="text"
-          className="task__five--input"
-        />
-        <p className="task__five--text">
-          4. Piece of food left after dinner or breakfast.
-        </p>
-        <input
-          name="value3"
-          value={getValue.value3 || ""}
-          onChange={valueEventListener}
-          id="3"
-          type="text"
-          className="task__five--input"
-        />
-        <p className="task__five--text">5. The opposite of respect.</p>
-        <input
-          name="value4"
-          value={getValue.value4 || ""}
-          onChange={valueEventListener}
-          id="4"
-          type="text"
-          className="task__five--input"
-        />
-        <p className="task__five--text">
-          6. This word can be described as something valuable.
-        </p>
-        <input
-          name="value5"
-          value={getValue.value5 || ""}
-          onChange={valueEventListener}
-          id="5"
-          type="text"
-          className="task__five--input"
-        />
+        {props.task5Data.map((item, index) => {
+          return (
+            <label key={index}>
+              <p className="task__five--text">{item.question}</p>
+              <input
+                value={item.value}
+                onChange={(e) => handleInputChange(index, e.target.value)}
+                type="text"
+                className="task__five--input"
+              />
+            </label>
+          );
+        })}
       </div>
     </>
   );

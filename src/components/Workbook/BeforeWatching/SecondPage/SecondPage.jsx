@@ -12,6 +12,8 @@ import img8 from "../../../../assets/task4/8.jpg";
 import { useState } from "react";
 const SecondPage = (props) => {
   const twoData = props.state.coordinateReducer.coordinate;
+  let result = new Set();
+
   const images = [
     [
       { img: img1, id: 1 },
@@ -27,12 +29,12 @@ const SecondPage = (props) => {
     ],
   ];
 
-  const [changeTextTask1, setChangeTextTask1] = useState("");
+  const [changeTextTask4, setChangeTextTask4] = useState("");
 
   const changeTextFunc = () => {
-    setChangeTextTask1(
-      props.result.size < 8
-        ? `Correct ${props.result.size}/${twoData.length}`
+    setChangeTextTask4(
+      result.size < twoData.length
+        ? `Correct ${result.size}/${twoData.length}`
         : `All are correct!`
     );
   };
@@ -41,11 +43,12 @@ const SecondPage = (props) => {
     <div className="page__second">
       <h1>Before Watching</h1>
       <TaskOneSecondPage
+        result={result}
         twoData={twoData}
         images={images}
         checkAns={props.checkAns}
       />
-      <h4>{changeTextTask1}</h4>
+      <h4>{changeTextTask4}</h4>
       <div className="button__div">
         <button onClick={changeTextFunc}>Check Answer</button>
       </div>

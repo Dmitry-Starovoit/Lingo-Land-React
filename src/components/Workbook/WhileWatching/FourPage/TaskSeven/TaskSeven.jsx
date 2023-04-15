@@ -11,6 +11,11 @@ const TaskSevenFourPage = (props) => {
       [event.target.name]: new String(event.target.value).toLowerCase(),
     });
   };
+  const item = [
+    { img: imgScar, text: "hello" },
+    { img: imgZazu, text: "nnnnnn" },
+    { img: imgScar, text: "0000000" },
+  ];
 
   props.valueEventHandlerTask7(getValue);
   return (

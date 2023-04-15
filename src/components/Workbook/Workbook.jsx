@@ -12,8 +12,8 @@ const Workbook = function () {
       <HeaderPage />
       <div className="content__workbook">
         <BeforeWatching state={state} />
-        <WhileWatching />
-        <AfterWatching />
+        <WhileWatching state={state} />
+        <AfterWatching state={state} />
         <div style={{ height: "20px" }}></div>
       </div>
     </div>

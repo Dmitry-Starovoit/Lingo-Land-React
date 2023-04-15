@@ -3,7 +3,7 @@ import FivePage from "./FivePage/FivePage";
 import SixPage from "./SixPage/SixPage";
 import SevenPage from "./SevenPage/SevenPage";
 
-const WhileWatching = () => {
+const WhileWatching = (props) => {
   ///////FourPage////////
   const task7Ans = [
     "aproaches",
@@ -32,32 +32,15 @@ const WhileWatching = () => {
   };
 
   /////////FivePage/////////////
-  const dataEightTask = [
-    "Sarabi and I didn't see you at the presentation of Simba.",
-    "Of course I meant no disrespect towards His Majesty or Sarabi.",
-    "Well, look who's come down to mingle with the commoners.",
-    "Must've slipped my mind.",
-    "As the king's brother you should've been first in line.",
-    "Was that today?",
-    "I was first in line Or don't you remember?",
-    "As you know, I have tremendous respect for the queen.",
-  ];
-  const task8Ans = ["1", "2", "3", "4", "5", "6", "7", "8"];
-  let task8Result = new Set();
-  const valueEventHandlerTask8 = (getValue) => {
-    valueHandler(task8Ans, task8Result, getValue);
-  };
-
-  ////////SixPage//////
-  const task9Ans = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  const task10Ans = ["1", "2", "3", "4"];
-  let task9Result = new Set();
-  let task10Result = new Set();
-  const valueEventHandlerTask9 = (getValue) => {
-    valueHandler(task9Ans, task9Result, getValue);
-  };
-  const valueEventHandlerTask10 = (getValue) => {
-    valueHandler(task10Ans, task10Result, getValue);
+  const valueHandlerAfter = (inputValues, result) => {
+    for (let i = 0; i < inputValues.length; i++) {
+      if (inputValues[i].value === inputValues[i].answer) {
+        result.add(inputValues[i].id);
+      } else {
+        result.delete(inputValues[i].id);
+      }
+    }
+    return result;
   };
 
   //////SevenPage//////
@@ -150,22 +133,8 @@ const WhileWatching = () => {
         task7Ans={task7Ans}
         task7Result={task7Result}
       />
-      <FivePage
-        valueHandler={valueHandler}
-        valueEventHandlerTask8={valueEventHandlerTask8}
-        dataEightTask={dataEightTask}
-        task8Ans={task8Ans}
-        task8Result={task8Result}
-      />
-      <SixPage
-        valueHandler={valueHandler}
-        valueEventHandlerTask9={valueEventHandlerTask9}
-        valueEventHandlerTask10={valueEventHandlerTask10}
-        task9Ans={task9Ans}
-        task10Ans={task10Ans}
-        task9Result={task9Result}
-        task10Result={task10Result}
-      />
+      <FivePage state={props.state} valueHandlerAfter={valueHandlerAfter} />
+      <SixPage state={props.state} valueHandlerAfter={valueHandlerAfter} />
       <SevenPage
         valueEventHandlerTask11={valueEventHandlerTask11}
         task11Data={task11Data}

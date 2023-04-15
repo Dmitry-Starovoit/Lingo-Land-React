@@ -21,8 +21,8 @@ const TaskThreeFirstPage = (props) => {
       <div className="task__three">
         {props.task3Data.map((item, index) => {
           return (
-            <>
-              <div>
+            <label key={index}>
+              <div key={item.id}>
                 <div className="task__three--item">
                   <div key={item.id} className="items">
                     <p className="task__three--text">{item.que}</p>
@@ -38,7 +38,7 @@ const TaskThreeFirstPage = (props) => {
                   />{" "}
                 </div>
               </div>
-            </>
+            </label>
           );
         })}
       </div>

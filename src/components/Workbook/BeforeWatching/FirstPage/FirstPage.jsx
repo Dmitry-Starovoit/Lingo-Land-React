@@ -5,17 +5,17 @@ import TaskThreeFirstPage from "./TaskThree/TaskThree";
 import TaskTwoFirstPage from "./TaskTwo/TaskTwo";
 
 const FirstPage = (props) => {
-  const task1Page1 = props.state.page1Task1Reducer.task1Page;
+  const task1Page1 = props.state.page1Reducer.task1Page;
   const task1Result = new Set();
 
   const task2DataColumnFirst =
-    props.state.page1Task1Reducer.task2DataColumnFirst;
+    props.state.page1Reducer.task2DataColumnFirst;
   const task2DataColumnSecond =
-    props.state.page1Task1Reducer.task2DataColumnSecond;
+    props.state.page1Reducer.task2DataColumnSecond;
   let task2ResultFirst = new Set();
   let task2ResultSecond = new Set();
 
-  const task3Data = props.state.page1Task1Reducer.task3Data;
+  const task3Data = props.state.page1Reducer.task3Data;
   let task3Result = new Set();
   const task2Data = [...task2DataColumnFirst, ...task2DataColumnSecond];
 

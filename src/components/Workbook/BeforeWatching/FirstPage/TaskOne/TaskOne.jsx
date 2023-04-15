@@ -22,7 +22,7 @@ const TaskOneFirstPage = (props) => {
         <p className="task__text">
           {props.task1Page1.map((item, index) => {
             return (
-              <>
+              <label key={index}>
                 {item.textBefore}
                 <input
                   value={item.value}
@@ -31,7 +31,7 @@ const TaskOneFirstPage = (props) => {
                   className="input__text"
                 />{" "}
                 {item.textAfter}{" "}
-              </>
+              </label>
             );
           })}
         </p>

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { setCoordinate } from "../../../../../../store/actions";
 
@@ -11,14 +10,14 @@ const AnswerBlock = (props) => {
     newInputValues[index].y = y;
     dispatch(setCoordinate(newInputValues));
   };
-
-  props.checkAns(props.twoData);
+  props.checkAns(props.twoData, props.result);
 
   return (
     <>
       {props.twoData.map((item, index) => {
         return (
           <div
+            key={item.id}
             style={{
               left: item.x,
               top: item.y,
