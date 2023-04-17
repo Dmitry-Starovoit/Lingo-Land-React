@@ -3,12 +3,14 @@ import "./TwelvePage.css";
 import { useState } from "react";
 
 const TwelvePage = (props) => {
+  const page12Data = props.state.page12Reducer.page12Data;
+  const page12Result = new Set();
   const [changeTextTask7, setChangeTextTask7] = useState("");
 
   const changeTextFunc = () => {
     setChangeTextTask7(
-      props.page12Result.size < 5
-        ? `Correct ${props.page12Result.size}/${props.page12Ans.length}`
+      page12Result.size < page12Data.length
+        ? `Correct ${page12Result.size}/${page12Data.length}`
         : `All are correct!`
     );
   };
@@ -16,11 +18,9 @@ const TwelvePage = (props) => {
     <div className="page__twelve">
       <h1>After Watching</h1>
       <TaskTwelvePage
-        page12Result={props.page12Result}
+        page12Result={page12Result}
         valueHandlerAfter={props.valueHandlerAfter}
-        handleInputChange={props.handleInputChange}
-        page12Ans={props.page12Ans}
-        inputValues={props.inputValues}
+        page12Data={page12Data}
       />
       <h4>{changeTextTask7}</h4>
       <div className="button__div">

@@ -12,7 +12,7 @@ const FourteenPageTask = (props) => {
 
   return (
     <div className="fourteen__page--task">
-      {props.task14Ans.map((items, index) => {
+      {props.task14Data.map((items, index) => {
         return (
           <div key={index} className="fourteen__page--block">
             <p className="question__text">{items.questionText}</p>

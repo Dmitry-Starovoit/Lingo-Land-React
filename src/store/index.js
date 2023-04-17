@@ -6,6 +6,10 @@ import { page3Reducer } from "./Reducers/PageThirdReducer";
 import { page5Reducer } from "./Reducers/PageFiveReducer";
 import { page6Reducer } from "./Reducers/PageSixReducer";
 import { page7Reducer } from "./Reducers/PageSevenReducer";
+import { page10Reducer } from "./Reducers/PageTenReducer";
+import { page11Reducer } from "./Reducers/PageElevenReducer";
+import { page12Reducer } from "./Reducers/PageTwelveReducer";
+import { page15Reducer } from "./Reducers/PageFifteenReducer";
 
 const combineReducer = combineReducers({
   VocabullaryReducer,
@@ -16,6 +20,10 @@ const combineReducer = combineReducers({
   page5Reducer,
   page6Reducer,
   page7Reducer,
+  page10Reducer,
+  page11Reducer,
+  page12Reducer,
+  page15Reducer,
 });
 
 const store = legacy_createStore(combineReducer);

@@ -6,83 +6,85 @@ import fourImg from "../../assets/task11/four-img.jpg";
 const initialState = {
   task11ColumnFirst: [
     {
-      id: 1,
-      question: "Did Zazu have a morning report?",
-      img: firstImg,
-      value: "",
-
-      answers: [
+      questionText: "Did Zazu have a morning report?",
+      image: firstImg,
+      answerOptions: [
         {
-          answer: "He didn't see anyone, he didn't have to tell.",
-          value: false,
-          name: "one",
-          id: 0,
+          id: "choose1",
+          answerText: "He didn't see anyone, he didn't have to tell.",
+          isCorrect: false,
         },
         {
-          answer: "He had a morning report.",
-          name: "one",
-          value: true,
-          id: 1,
+          id: "choose1",
+          answerText: "He had a morning report.",
+          isCorrect: true,
         },
       ],
     },
     {
-      id: 2,
-      question: "Who owns these words 'it`s the news'?",
-      img: twoImg,
-      value: "",
-
-      answers: [
+      questionText: "Who owns these words 'it`s the news'?",
+      image: twoImg,
+      answerOptions: [
         {
-          answer: "Zazu",
-          value: true,
-          name: "two",
-          id: 2,
+          id: "choose2",
+          answerText: "Zazu",
+          isCorrect: true,
         },
-        { answer: "Simba", value: false, name: "two", id: 3 },
+        {
+          id: "choose2",
+          answerText: "Simba",
+          isCorrect: false,
+        },
+        {
+          id: "choose2",
+          answerText: "Mufasu",
+          isCorrect: false,
+        },
       ],
     },
   ],
   task11ColumnSecond: [
     {
-      id: 3,
-      question:
+      questionText:
         "For whom Mufasa said these words 'Wait for the perfect moment to pounce'?",
-      img: threeImg,
-      value: "",
-
-      answers: [
+      image: threeImg,
+      answerOptions: [
         {
-          answer: "Zazy",
-          value: false,
-          name: "three",
-          id: 5,
+          id: "choose3",
+          answerText: "Zazy",
+          isCorrect: false,
         },
-        { answer: "Simba", value: true, name: "three", id: 6 },
+        {
+          id: "choose3",
+          answerText: "Simba",
+          isCorrect: true,
+        },
       ],
     },
     {
-      id: 4,
-      question: "Why did Mufasa not take Simba with him?",
-      img: fourImg,
-      value: "",
-
-      answers: [
+      questionText: "Why did Mufasa not take Simba with him?",
+      image: fourImg,
+      answerOptions: [
         {
-          answer: "Simba had a headache and he couldn't.",
-          value: false,
-          name: "four",
-          id: 7,
+          id: "choose4",
+          answerText: "Simba had a headache and he couldn't.",
+          isCorrect: false,
         },
         {
-          answer: "Because Simba is still a child.",
-          value: true,
-          name: "four",
-          id: 8,
+          id: "choose4",
+          answerText: "Because Simba is still a child.",
+          isCorrect: true,
+        },
+        {
+          id: "choose4",
+          answerText: "Because Simba broke his leg.",
+          isCorrect: false,
         },
       ],
     },
   ],
+  task11ResultFirst: new Set(),
+  task11ResultSecond: new Set(),
 };
 
 export function page7Reducer(state = initialState, action) {

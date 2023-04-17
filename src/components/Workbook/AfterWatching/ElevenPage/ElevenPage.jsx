@@ -1,15 +1,17 @@
-import TaskTenPage from "./Task/TaskElevenPage";
 import "./ElevenPage.css";
 import { useState } from "react";
 import TaskElevenPage from "./Task/TaskElevenPage";
 
 const ElevenPage = (props) => {
+  const page11Data = props.state.page11Reducer.page11Data;
+
+  const page11Result = new Set();
   const [changeTextTask7, setChangeTextTask7] = useState("");
 
   const changeTextFunc = () => {
     setChangeTextTask7(
-      props.page11Result.size < 5
-        ? `Correct ${props.page11Result.size}/${props.page11Ans.length}`
+      page11Result.size < 5
+        ? `Correct ${page11Result.size}/${page11Data.length}`
         : `All are correct!`
     );
   };
@@ -17,11 +19,9 @@ const ElevenPage = (props) => {
     <div className="page__eleven">
       <h1>After Watching</h1>
       <TaskElevenPage
-        page11Result={props.page11Result}
+        page11Data={page11Data}
+        page11Result={page11Result}
         valueHandlerAfter={props.valueHandlerAfter}
-        handleInputChange={props.handleInputChange}
-        page11Ans={props.page11Ans}
-        inputValues={props.inputValues}
       />
       <h4>{changeTextTask7}</h4>
       <div className="button__div">

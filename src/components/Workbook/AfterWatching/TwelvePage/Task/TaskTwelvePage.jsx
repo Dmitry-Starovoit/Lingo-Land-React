@@ -1,21 +1,23 @@
 import { useState } from "react";
 import "./TaskTwelvePage.css";
 import img from "../../../../../assets/after_watching/img-1.png";
+import { useDispatch } from "react-redux";
+import { getValuePage12 } from "../../../../../store/actions";
 
 const TaskTwelvePage = (props) => {
-  const [inputValues, setInputValues] = useState(props.page12Ans);
+  const dispatch = useDispatch();
 
   const handleInputChange = (index, value) => {
-    const newInputValues = [...inputValues];
+    const newInputValues = [...props.page12Data];
     newInputValues[index].value = value;
-    setInputValues(newInputValues);
+    dispatch(getValuePage12(newInputValues));
   };
 
-  props.valueHandlerAfter(inputValues, props.page12Result);
+  props.valueHandlerAfter(props.page12Data, props.page12Result);
 
   return (
     <>
-      {inputValues.map((value, index) => (
+      {props.page12Data.map((value, index) => (
         <div key={index} className="block__twelve--page">
           <p>{value.text}</p>
           <input

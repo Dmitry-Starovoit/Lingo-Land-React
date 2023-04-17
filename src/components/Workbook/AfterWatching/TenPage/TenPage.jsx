@@ -3,12 +3,14 @@ import "./TenPage.css";
 import { useState } from "react";
 
 const TenPage = (props) => {
+  const page10Data = props.state.page10Reducer.page10Data;
+  const page10Result = new Set();
   const [changeTextTask7, setChangeTextTask7] = useState("");
 
   const changeTextFunc = () => {
     setChangeTextTask7(
-      props.page10Result.size < 5
-        ? `Correct ${props.page10Result.size}/${props.page10Ans.length}`
+      page10Result.size < page10Data.length
+        ? `Correct ${page10Result.size}/${page10Data.length}`
         : `All are correct!`
     );
   };
@@ -16,11 +18,9 @@ const TenPage = (props) => {
     <div className="page__ten">
       <h1>After Watching</h1>
       <TaskTenPage
-        page10Result={props.page10Result}
+        page10Result={page10Result}
         valueHandlerAfter={props.valueHandlerAfter}
-        handleInputChange={props.handleInputChange}
-        page10Ans={props.page10Ans}
-        inputValues={props.inputValues}
+        page10Data={page10Data}
       />
       <h4>{changeTextTask7}</h4>
       <div className="button__div">

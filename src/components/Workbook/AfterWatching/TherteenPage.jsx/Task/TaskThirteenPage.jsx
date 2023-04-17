@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./TaskThirteenPage.css";
 
 const TaskThirteenPage = (props) => {
@@ -12,7 +11,7 @@ const TaskThirteenPage = (props) => {
 
   return (
     <div className="therteen__page--task">
-      {props.task13Ans.map((items, index) => {
+      {props.task13Data.map((items, index) => {
         return (
           <div key={index} className="thirteen__page--block">
             <p className="question__text">{items.questionText}</p>

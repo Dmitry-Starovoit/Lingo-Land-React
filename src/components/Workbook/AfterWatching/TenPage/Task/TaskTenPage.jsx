@@ -1,21 +1,22 @@
-import { useState } from "react";
 import "./TaskTenPage.css";
 import img from "../../../../../assets/after_watching/img-1.png";
+import { useDispatch } from "react-redux";
+import { addResultTask10, getValuePage10 } from "../../../../../store/actions";
 
 const TaskTenPage = (props) => {
-  const [inputValues, setInputValues] = useState(props.page10Ans);
+  const dispatch = useDispatch();
 
   const handleInputChange = (index, value) => {
-    const newInputValues = [...inputValues];
+    const newInputValues = [...props.page10Data];
     newInputValues[index].value = value;
-    setInputValues(newInputValues);
+    dispatch(getValuePage10(newInputValues));
   };
 
-  props.valueHandlerAfter(inputValues, props.page10Result);
+  props.valueHandlerAfter(props.page10Data, props.page10Result);
 
   return (
     <>
-      {inputValues.map((value, index) => (
+      {props.page10Data.map((value, index) => (
         <div key={index} className="block__ten--page">
           <p>{value.text}</p>
           <input

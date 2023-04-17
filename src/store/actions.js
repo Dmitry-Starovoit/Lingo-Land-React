@@ -73,3 +73,31 @@ export const getValueTask11Second = (value) => ({
   type: "GET_VALUE_TASK11_SECOND",
   payload: value,
 });
+
+export const getValuePage10 = (value) => ({
+  type: "GET_VALUE_PAGE10",
+  payload: value,
+});
+
+export const addResultTask10 = (value) => ({
+  type: "ADD_RESULT_PAGE10",
+  payload: value,
+});
+
+export const getValuePage11 = (value) => ({
+  type: "GET_VALUE_PAGE11",
+  payload: value,
+});
+export const getValuePage12 = (value) => ({
+  type: "GET_VALUE_PAGE12",
+  payload: value,
+});
+
+export const getValuePage15 = (value) => ({
+  type: "GET_VALUE_TASK1_PAGE15",
+  payload: value,
+});
+export const getValue2Page15 = (value) => ({
+  type: "GET_VALUE_TASK2_PAGE15",
+  payload: value,
+});

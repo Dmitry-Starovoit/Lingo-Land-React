@@ -1,33 +1,32 @@
-import { useState } from "react";
+import { useDispatch } from "react-redux";
 import "./TaskEleven.css";
-import firstImg from "../../../../../assets/task11/first-img.jpg";
-import twoImg from "../../../../../assets/task11/second-img.jpg";
-import threeImg from "../../../../../assets/task11/three-img.jpg";
-import fourImg from "../../../../../assets/task11/four-img.jpg";
-const TaskElevenSevenPage = (props) => {
-  const [getValueTaskOne, setGetValueTaskOne] = useState(false);
-  const [getValueTaskTwo, setGetValueTaskTwo] = useState(false);
-  const [getValueTaskThree, setGetValueTaskThree] = useState(false);
-  const [getValueTaskFour, setGetValueTaskFour] = useState(false);
+import { getValueTask11First } from "../../../../../store/actions";
+import { getValueTask11Second } from "../../../../../store/actions";
 
-  const valueEventListenerTaskOne = (event) => {
-    setGetValueTaskOne(event.target.value);
+const TaskElevenSevenPage = (props) => {
+  const dispatch = useDispatch();
+  const valueEventListenerTaskOne1 = (event) => {
+    if (event.target.value === "true") {
+      dispatch(
+        getValueTask11First(props.task11ResultFirst.add(event.target.id))
+      );
+    } else {
+      dispatch(
+        getValueTask11First(props.task11ResultFirst.delete(event.target.id))
+      );
+    }
   };
-  const valueEventListenerTaskTwo = (event) => {
-    setGetValueTaskTwo(event.target.value);
+  const valueEventListenerTaskOne2 = (event) => {
+    if (event.target.value === "true") {
+      dispatch(
+        getValueTask11Second(props.task11ResultSecond.add(event.target.id))
+      );
+    } else {
+      dispatch(
+        getValueTask11Second(props.task11ResultSecond.delete(event.target.id))
+      );
+    }
   };
-  const valueEventListenerTaskThree = (event) => {
-    setGetValueTaskThree(event.target.value);
-  };
-  const valueEventListenerTaskFour = (event) => {
-    setGetValueTaskFour(event.target.value);
-  };
-  props.valueEventHandlerTask11(
-    getValueTaskOne,
-    getValueTaskTwo,
-    getValueTaskThree,
-    getValueTaskFour
-  );
 
   return (
     <>
@@ -36,84 +35,54 @@ const TaskElevenSevenPage = (props) => {
       </div>
       <div className="task__block--flex">
         <div className="first__column">
-          <div className="block__item">
-            <p className="text__question">{props.task11Data[0].question}</p>
-            <img src={firstImg} alt="" className="img" />
-            {props.task11Data[0].answers.map((item, index) => {
-              return (
-                <div key={item.id} className="text__task--eleven">
-                  <input
-                    className="checkbox__input"
-                    type="radio"
-                    onChange={valueEventListenerTaskOne}
-                    id="contactChoice1"
-                    name="one"
-                    value={item.value}
-                  />
-                  <label className="text">{item.answer}</label>
-                </div>
-              );
-            })}
-          </div>
-          <div className="block__item">
-            <p className="text__question">{props.task11Data[1].question}</p>
-            <img src={twoImg} alt="" className="img__two" />
-            {props.task11Data[1].answers.map((item, index) => {
-              return (
-                <div key={item.id} className="text__task--eleven">
-                  <input
-                    className="checkbox__input"
-                    type="radio"
-                    onChange={valueEventListenerTaskTwo}
-                    id="contactChoice1"
-                    name="two"
-                    value={item.value}
-                  />
-                  <label className="text">{item.answer}</label>
-                </div>
-              );
-            })}
-          </div>
+          {props.task11ColumnFirst.map((items, index) => {
+            return (
+              <div key={index} className="block__item">
+                <p className="text__question">{items.questionText}</p>
+                <img src={items.image} alt="" className="img" />
+                {items.answerOptions.map((items, index) => {
+                  return (
+                    <div key={index} className="text__task--eleven">
+                      <input
+                        className="checkbox__input"
+                        type="radio"
+                        onChange={valueEventListenerTaskOne1}
+                        id={items.id}
+                        name={items.id}
+                        value={items.isCorrect}
+                      />
+                      <label className="text">{items.answerText}</label>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
         <div className="second__column">
-          <div className="block__item">
-            <p className="text__question">{props.task11Data[2].question}</p>
-            <img src={threeImg} alt="" className="img" />
-            {props.task11Data[2].answers.map((item, index) => {
-              return (
-                <div key={item.id} className="text__task--eleven">
-                  <input
-                    className="checkbox__input"
-                    type="radio"
-                    onChange={valueEventListenerTaskThree}
-                    id="contactChoice1"
-                    name="three"
-                    value={item.value}
-                  />
-                  <label className="text">{item.answer}</label>
-                </div>
-              );
-            })}
-          </div>
-          <div className="block__item">
-            <p className="text__question">{props.task11Data[3].question}</p>
-            <img src={fourImg} alt="" className="img__two" />
-            {props.task11Data[3].answers.map((item, index) => {
-              return (
-                <div key={item.id} className="text__task--eleven">
-                  <input
-                    className="checkbox__input"
-                    type="radio"
-                    onChange={valueEventListenerTaskFour}
-                    id="contactChoice1"
-                    name="four"
-                    value={item.value}
-                  />
-                  <label className="text">{item.answer}</label>
-                </div>
-              );
-            })}
-          </div>
+          {props.task11ColumnSecond.map((items, index) => {
+            return (
+              <div key={index} className="block__item">
+                <p className="text__question">{items.questionText}</p>
+                <img src={items.image} alt="" className="img" />
+                {items.answerOptions.map((items, index) => {
+                  return (
+                    <div key={index} className="text__task--eleven">
+                      <input
+                        className="checkbox__input"
+                        type="radio"
+                        onChange={valueEventListenerTaskOne2}
+                        id={items.id}
+                        name={items.id}
+                        value={items.isCorrect}
+                      />
+                      <label className="text">{items.answerText}</label>
+                    </div>
+                  );
+                })}
+              </div>
+            );
+          })}
         </div>
       </div>
     </>

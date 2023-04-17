@@ -4,38 +4,50 @@ import FifteenPageTaskOne from "./Task1/FifteenPageTaskOne";
 import FifteenPageTaskTwo from "./Task2/FifteenPageTaskTwo";
 
 const FifteenPage = (props) => {
+  const page15Task1Data = props.state.page15Reducer.task1Page15;
+  const page15Task1Result = new Set();
+
+  const page15Task2DataFirstColumn =
+    props.state.page15Reducer.task2Page15ColumnFirst;
+  const page15Task2DataSecondColumn =
+    props.state.page15Reducer.task2Page15ColumnSecond;
+  const page15Task2Result = new Set();
+
   const [changeTextTask1, setChangeTextTask1] = useState("");
   const [changeTextTask2, setChangeTextTask2] = useState("");
 
   const changeTextFunc = () => {
     setChangeTextTask1(
-      props.page15Task1Result.size < props.page15Task1Ans.length
-        ? `Correct ${props.page15Task1Result.size}/${props.page15Task1Ans.length}`
+      page15Task1Result.size < page15Task1Data.length
+        ? `Correct ${page15Task1Result.size}/${page15Task1Data.length}`
         : `All are correct!`
     );
     setChangeTextTask2(
-      props.page15Task2Result.size < props.page15Task2Ans.length
-        ? `Correct ${props.page15Task2Result.size}/${props.page15Task2Ans.length}`
+      page15Task2Result.size <
+        page15Task2DataFirstColumn.length + page15Task2DataSecondColumn.length
+        ? `Correct ${page15Task2Result.size}/${
+            page15Task2DataFirstColumn.length +
+            page15Task2DataSecondColumn.length
+          }`
         : `All are correct!`
     );
   };
-  const valueEventHandlerTask1 = (getValue) => {
-    props.valueHandler(props.page15Task1Ans, props.page15Task1Result, getValue);
-  };
+
   return (
     <div className="page__fifteen">
       <h1>After Watching</h1>
       <FifteenPageTaskOne
-        page15Task1Ans={props.page15Task1Ans}
-        page15Task1Result={props.page15Task1Result}
-        valueEventHandler={valueEventHandlerTask1}
+        page15Task1Data={page15Task1Data}
+        page15Task1Result={page15Task1Result}
+        valueHandlerAfter={props.valueHandlerAfter}
       />
 
       <h4>{changeTextTask1}</h4>
       <FifteenPageTaskTwo
-        page15Task2Result={props.page15Task2Result}
+        page15Task2DataFirstColumn={page15Task2DataFirstColumn}
+        page15Task2DataSecondColumn={page15Task2DataSecondColumn}
+        page15Task2Result={page15Task2Result}
         valueHandlerAfter={props.valueHandlerAfter}
-        page15Task2Ans={props.page15Task2Ans}
       />
       <h4>{changeTextTask2}</h4>
       <div className="button__div">
