@@ -1,6 +1,6 @@
 import FourteenPageTask from "./Task/FourteenPageTask";
+import task14Data from "../../../../assets/JsonData/Task14Data";
 import "./FourteenPage.css";
-import task14Data from "./../../../../assets/JsonData/Task14Data";
 import { useState } from "react";
 
 const FourteenPage = (props) => {

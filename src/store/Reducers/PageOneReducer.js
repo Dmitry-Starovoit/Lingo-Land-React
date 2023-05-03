@@ -1,4 +1,5 @@
 const initialState = {
+  task: [],
   task1Page: [
     {
       id: 0,
@@ -115,6 +116,11 @@ const initialState = {
 
 export function page1Reducer(state = initialState, action) {
   switch (action.type) {
+    case "GET_DATA_TASK1":
+      return {
+        ...state,
+        task: [...state.task, ...action.payload],
+      };
     case "GET_VALUE_TASK1":
       return {
         ...state,

@@ -14,7 +14,7 @@ const NavButton = (props) => {
         onClick={() => {
           props.handleNext();
         }}
-        class="mainmenubtn footer__mainmenubtn"
+        class="mainmenubtn"
       >
         Продовжити
       </button>
@@ -25,7 +25,7 @@ const NavButton = (props) => {
         onClick={() => {
           props.handlePrew();
         }}
-        class="mainmenubtn footer__mainmenubtn"
+        class="mainmenubtn"
       >
         Я це знаю!
       </button>

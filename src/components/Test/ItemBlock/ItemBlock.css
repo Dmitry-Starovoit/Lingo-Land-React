@@ -1,0 +1,117 @@
+.item__block--test {
+  margin-top: 30px;
+  padding-top: 30px;
+  width: 700px;
+  height: 400px;
+  background-color: #252d4a;
+  color: #ebebeb;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.item__block--wrapper {
+  margin-top: 100px;
+}
+
+.item__block--test .score-section {
+  display: flex;
+  font-size: 40px;
+  align-items: center;
+}
+
+.item__block--flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* QUESTION/TIMER/LEFT SECTION */
+.item__block--test .question-section {
+  width: 100%;
+}
+
+.item__block--test .question-count {
+  margin-bottom: 20px;
+}
+
+.item__block--test .question-count span {
+  font-size: 30px;
+}
+
+.item__block--test .question-text {
+  margin-bottom: 12px;
+  margin-top: 120px;
+  font-size: 25px;
+}
+
+.question-label {
+  margin-top: 150px;
+  color: #d0d0d0;
+}
+
+.item__block--test .timer-text {
+  background: rgb(230, 153, 12);
+  padding: 15px;
+  margin-top: 20px;
+  margin-right: 20px;
+  border: 5px solid rgb(255, 189, 67);
+  border-radius: 15px;
+  text-align: center;
+}
+
+/* ANSWERS/RIGHT SECTION */
+.item__block--test .answer__section--test {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.item__block--test button {
+  margin: 0 auto;
+  width: 300px;
+  height: 50px;
+  font-weight: 200;
+  font-size: 20px;
+  color: #d0d0d0;
+  background-color: #252d4a;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  border: 1px solid #234668;
+  cursor: pointer;
+}
+
+.item__block--test .answer__section--test button {
+  width: 300px;
+  height: 50px;
+  font-weight: 200;
+  font-size: 20px;
+  color: #d0d0d0;
+  background-color: #252d4a;
+  border-radius: 5px;
+  margin-top: 20px;
+  display: flex;
+
+  align-items: center;
+  border: 1px solid #234668;
+  cursor: pointer;
+}
+
+.item__block--test .answer__section--test button:hover {
+  background-color: #555e7d;
+  color: #ebebeb;
+}
+
+.item__block--test .answer__section--test button:focus {
+  outline: none;
+}
+
+.result__block--test {
+  background-color: none;
+}
+
+.result__block--test .result__block--item {
+  background-color: #5e6ca0;
+}

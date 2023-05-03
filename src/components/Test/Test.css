@@ -1,7 +1,12 @@
-.learn__words--block {
-  background: rgb(252, 252, 252);
+.test__words--block {
+  background: rgb(75, 91, 127);
   text-align: center;
   margin: 0 auto;
+  height: 76.5vh;
+}
+
+.test__wrapper {
+  background: rgb(75, 91, 127);
 }
 
 .slider {
@@ -34,18 +39,14 @@
   background-color: blue;
 }
 .block__slider {
-  max-width: 500px;
-  max-height: 300px;
+  width: 500px;
+  height: 300px;
   background: #ffd943;
   color: rgb(100, 100, 100);
   border: 3px solid gray;
   border-radius: 20px;
   text-align: center;
   position: relative;
-  @media (max-width: 520px) {
-    max-width: 300px;
-    max-height: 200px;
-  }
 }
 
 .block__child {
@@ -58,19 +59,16 @@
   width: 50%;
   height: 30%;
   margin: auto;
-  @media (max-width: 520px) {
-    font-size: 25px;
-  }
 }
 
-.learn__words--block button {
+.test__words--block button {
   border-radius: 20px;
   border-radius: 20px;
   background: #fecc05;
   color: rgb(72, 72, 72);
 }
 
-.learn__words--block .mainmenubtn:hover {
+.test__words--block .mainmenubtn:hover {
   background: #ffdb4c;
   box-shadow: none;
   height: 50px;
@@ -81,21 +79,9 @@
   border: none;
   cursor: pointer;
   height: 50px;
-  max-width: 250px;
+  width: 250px;
   margin-top: 20px;
   border-bottom: 5px solid #d5aa00;
-  @media (max-width: 520px) {
-    max-width: 200px;
-    font-size: 14px;
-  }
-}
-
-.footer__mainmenubtn {
-  max-width: 200px;
-  @media (max-width: 520px) {
-    max-width: 150px;
-    font-size: 14px;
-  }
 }
 .dropdown {
   position: relative;
@@ -157,6 +143,10 @@
   justify-content: center;
 }
 
+.result__block--flex div + div {
+  margin-left: 80px;
+}
+
 .result__block--flex div {
   margin-top: 70px;
   background-color: white;
@@ -166,25 +156,8 @@
 
 .result__block {
   background-color: #ececec;
-  max-width: 450px;
+  width: 450px;
   height: 200px;
   margin: 0 auto;
   border-radius: 20px;
-  @media (max-width: 520px) {
-    max-width: 350px;
-  }
-}
-
-.mainmenubtn__item {
-  border: none;
-  cursor: pointer;
-  height: 50px;
-  max-width: 100px;
-  margin-top: 20px;
-  border-bottom: 5px solid #d5aa00;
-  @media (max-width: 520px) {
-    max-width: 100px;
-    font-size: 14px;
-    height: 30px;
-  }
 }

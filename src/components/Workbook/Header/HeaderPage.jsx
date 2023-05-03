@@ -4,7 +4,8 @@ import img from "../../../assets/logo-workbook.png";
 import exit from "../../../assets/exit-workbook.png";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import "./HeaderPage.css";
-const HeaderPage = () => {
+import Profile from "../Profile/Profile";
+const HeaderPage = (props) => {
   return (
     <>
       <div className="workbook__header">
@@ -14,21 +15,24 @@ const HeaderPage = () => {
             <h1 className="header__text--workbook">Workbook - Lion King</h1>
           </div>
           <div className="workbook__right">
+            {props.isLoggedIn && <Profile userName={props.userName} />}
             <Link to="/">
               <img className="header__exit--workbook" src={exit} alt="" />
             </Link>
           </div>
         </div>
       </div>
-      <div className="header__workbook">
-        <h1>Workbook "The Lion King"</h1>
-        <h4>
-          With our workbook, you will learn to put words in the appropriate
-          tense, begin to understand English words and sentences by ear, and
-          improve your English skills.
-        </h4>
-        <video controls src={video} poster={poster}></video>
-      </div>
+      {props.isLoggedIn && (
+        <div className="header__workbook">
+          <h1>Workbook "The Lion King"</h1>
+          <h4>
+            With our workbook, you will learn to put words in the appropriate
+            tense, begin to understand English words and sentences by ear, and
+            improve your English skills.
+          </h4>
+          <video controls src={video} poster={poster}></video>
+        </div>
+      )}
     </>
   );
 };

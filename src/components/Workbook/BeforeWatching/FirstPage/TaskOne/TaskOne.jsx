@@ -1,7 +1,8 @@
 import { useState } from "react";
 import "./TaskOne.css";
 import { useDispatch } from "react-redux";
-import { getValueTask1 } from "../../../../../store/actions";
+import { getDataTask1, getValueTask1 } from "../../../../../store/actions";
+import { task1FetchCustomer } from "../../../../../store/Actions/AsyncTask1";
 
 const TaskOneFirstPage = (props) => {
   const dispatch = useDispatch();
@@ -12,7 +13,6 @@ const TaskOneFirstPage = (props) => {
     dispatch(getValueTask1(newInputValues));
   };
   props.valueHandlerAfter(props.task1Page1, props.task1Result);
-
   return (
     <>
       <div className="task__title">

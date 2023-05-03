@@ -20,7 +20,7 @@ const Header = function () {
             <Link to="/workbook">Workbook</Link>
           </li>
           <li className="nav__item">
-            <Link to="/contacts">Contacts</Link>
+            <Link to="/test">Test</Link>
           </li>
           <li className="nav__item">
             <Link to="/quiz">Quiz</Link>

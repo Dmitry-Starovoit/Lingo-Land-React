@@ -25,6 +25,11 @@ export const setCoordinate = (coordinate) => ({
   payload: coordinate,
 });
 
+export const getDataTask1 = (value) => ({
+  type: "GET_DATA_TASK1",
+  payload: value,
+});
+
 export const getValueTask1 = (value) => ({
   type: "GET_VALUE_TASK1",
   payload: value,

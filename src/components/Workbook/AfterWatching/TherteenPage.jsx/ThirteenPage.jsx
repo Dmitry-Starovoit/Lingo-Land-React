@@ -1,5 +1,5 @@
 import TaskThirteenPage from "./Task/TaskThirteenPage";
-import task13Data from "./../../../../assets/JsonData/Task13Data";
+import task13Data from "../../../../assets/JsonData/Task13Data";
 import "./ThirteenPage.css";
 import { useState } from "react";
 
